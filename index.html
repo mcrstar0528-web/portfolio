@@ -1461,8 +1461,15 @@ footer span { font-size: 11px; color: var(--text-light); }
       <!-- 문제 정의 -->
       <div class="case-section">
         <div class="case-title">문제</div>
-        <div style="padding:1.2rem 1.4rem;background:var(--white);border:1.5px solid var(--border);border-radius:10px;font-size:14px;color:var(--text-mid);line-height:1.75;">
-          일반인·대학생 주도 행사라 초기 인지도·신뢰도가 낮아 방문객 집객이 불확실했고, 셀러도 일반인이라 모집과 품질 관리를 동시에 해결해야 했습니다.
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+          <div style="padding:1.2rem 1.4rem;background:var(--white);border:1.5px solid var(--border);border-radius:10px;">
+            <div style="font-size:11px;font-weight:700;color:#e05a2b;margin-bottom:0.5rem;">방문객 모집의 한계</div>
+            <div style="font-size:13px;color:var(--text-mid);line-height:1.75;">일반인·대학생 주도 행사라 초기 인지도·신뢰도가 낮아 온라인 홍보만으로는 실제 집객이 불확실했습니다.</div>
+          </div>
+          <div style="padding:1.2rem 1.4rem;background:var(--white);border:1.5px solid var(--border);border-radius:10px;">
+            <div style="font-size:11px;font-weight:700;color:#e05a2b;margin-bottom:0.5rem;">셀러 모집·운영의 어려움</div>
+            <div style="font-size:13px;color:var(--text-mid);line-height:1.75;">셀러도 일반인이라 참여 설득, 판매 가능한 옷 선별, 품질 관리를 동시에 해결해야 했습니다.</div>
+          </div>
         </div>
       </div>
 
@@ -1475,7 +1482,7 @@ footer span { font-size: 11px; color: var(--text-light); }
             <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--accent);margin-bottom:1rem;">방문객 니즈</div>
             <ul style="list-style:none;display:flex;flex-direction:column;gap:0.7rem;">
               <li style="display:flex;gap:0.6rem;font-size:13px;color:#333;line-height:1.55;">
-                <span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>합리적 가격의 희소성 있는 패션
+                <span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>합리적 가격의 브랜드가 있는 옷
               </li>
               <li style="display:flex;gap:0.6rem;font-size:13px;color:#333;line-height:1.55;">
                 <span style="color:var(--accent);font-weight:700;flex-shrink:0;">✓</span>구경하는 재미와 현장 경험
@@ -1505,19 +1512,25 @@ footer span { font-size: 11px; color: var(--text-light); }
 
       <!-- 핵심 해결 액션 4개 카드 -->
       <div class="case-section">
-        <div class="case-title">핵심 해결 액션</div>
+        <div style="font-size:1.05rem;font-weight:800;color:#111;letter-spacing:-0.01em;margin-bottom:1rem;border-left:3px solid var(--accent);padding-left:0.75rem;">핵심 해결 액션</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
 
           <!-- 카드 1: 장소 선정 -->
           <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;">
             <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:0.5rem;">장소 선정</div>
-            <p style="font-size:13px;color:var(--text-mid);line-height:1.7;margin:0;">타깃(20대) 이동 동선·유동인구·공간 분위기 기준으로 후보 3곳 비교 후 성수역 앞 카페 선정</p>
+            <p style="font-size:13px;color:var(--text-mid);line-height:1.7;margin:0;">타깃(20대) 이동 동선·유동인구·공간 분위기 기준으로 후보 3곳 비교 후 뚝섬역 앞 카페 선정 후 대관</p>
           </div>
 
-          <!-- 카드 2: 셀러 모집 -->
-          <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;">
-            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:0.5rem;">셀러 모집·품질 관리</div>
-            <p style="font-size:13px;color:var(--text-mid);line-height:1.7;margin:0;">40명 컨택, 설득 포인트: 옷장 정리·중고앱 번거로움 한 번에 해결·참여비 무료 → <strong style="color:#222;">15명 확보</strong>. 자체 선별 기준 수립 후 2차 검수, 기준 미달 반려</p>
+          <!-- 카드 2: 셀러 모집·품질 관리 -->
+          <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;display:flex;flex-direction:column;gap:0.9rem;">
+            <div>
+              <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:0.4rem;">셀러 모집</div>
+              <p style="font-size:13px;color:var(--text-mid);line-height:1.7;margin:0;">40명 컨택. 설득 포인트: 옷장 정리·중고앱 번거로움 한 번에 해결·참여비 무료 → <strong style="color:#222;">15명 확보</strong></p>
+            </div>
+            <div style="border-top:1px solid var(--border);padding-top:0.9rem;">
+              <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:0.4rem;">품질 관리</div>
+              <p style="font-size:13px;color:var(--text-mid);line-height:1.7;margin:0;">중고거래 플랫폼 기준 참고해 자체 선별 기준 수립 → 셀러에게 사전 공유 → 수령 후 2차 검수 → 기준 미달 반려</p>
+            </div>
           </div>
 
           <!-- 카드 3: 온라인 홍보 -->
@@ -1532,7 +1545,12 @@ footer span { font-size: 11px; color: var(--text-light); }
           <!-- 카드 4: 오프라인 홍보 -->
           <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;">
             <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:0.5rem;">오프라인 홍보</div>
-            <p style="font-size:13px;color:var(--text-mid);line-height:1.7;margin:0 0 0.75rem 0;">성수역 출구에서 손바닥 크기 전단지 직접 배포. 카피: <em>'옷 좋아하는 대학생들이 연 플리마켓, 걸어서 2분'</em>. 전단지 지참 시 아이스 음료 1잔 무료 혜택으로 현장 유입 유도</p>
+            <ul style="list-style:none;margin:0 0 0.75rem 0;padding:0;display:flex;flex-direction:column;gap:0.4rem;">
+              <li style="font-size:13px;color:var(--text-mid);line-height:1.6;"><span style="font-weight:700;color:#555;margin-right:0.4rem;">장소</span>성수역 출구</li>
+              <li style="font-size:13px;color:var(--text-mid);line-height:1.6;"><span style="font-weight:700;color:#555;margin-right:0.4rem;">방식</span>손바닥 크기 전단지 직접 배포</li>
+              <li style="font-size:13px;color:var(--text-mid);line-height:1.6;"><span style="font-weight:700;color:#555;margin-right:0.4rem;">카피</span><em>'옷 좋아하는 대학생들이 연 플리마켓, 걸어서 2분'</em></li>
+              <li style="font-size:13px;color:var(--text-mid);line-height:1.6;"><span style="font-weight:700;color:#555;margin-right:0.4rem;">혜택</span>전단지 지참 시 아이스 음료 1잔 무료</li>
+            </ul>
             <div style="background:var(--light);border-radius:8px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;">
               <img src="전단지.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;">
             </div>
@@ -1549,10 +1567,10 @@ footer span { font-size: 11px; color: var(--text-light); }
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
           <div style="border-radius:10px;overflow:hidden;aspect-ratio:4/3;">
-            <img src="플리마켓1.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+            <img src="플리마켓1_crop.png" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
           <div style="border-radius:10px;overflow:hidden;aspect-ratio:4/3;">
-            <img src="플리마켓2.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+            <img src="플리마켓2_crop.png" style="width:100%;height:100%;object-fit:cover;display:block;">
           </div>
         </div>
       </div>
