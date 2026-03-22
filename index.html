@@ -1455,12 +1455,12 @@ footer span { font-size: 11px; color: var(--text-light); }
           </div>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:0.5rem;">
-        <div style="border-radius:10px;overflow:hidden;aspect-ratio:4/3;">
+      <div style="display:flex;flex-direction:row;gap:0.4rem;align-items:start;">
+        <div style="flex:1;border-radius:8px;overflow:hidden;aspect-ratio:4/3;">
           <img src="플리마켓1_crop.png" style="width:100%;height:100%;object-fit:cover;display:block;object-position:center center;">
         </div>
-        <div style="border-radius:10px;overflow:hidden;aspect-ratio:4/3;">
-          <img src="플리마켓2_crop.png" style="width:100%;height:100%;object-fit:cover;display:block;object-position:center top;">
+        <div style="flex:1;border-radius:8px;overflow:hidden;aspect-ratio:4/3;">
+          <img src="플리마켓2_crop.png" style="width:100%;height:100%;object-fit:cover;display:block;object-position:center center;">
         </div>
       </div>
     </div>
@@ -1526,7 +1526,7 @@ footer span { font-size: 11px; color: var(--text-light); }
           <!-- 카드 1: 장소 선정 -->
           <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;">
             <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;">
-              <span style="font-size:11px;font-weight:800;color:#ccc;">01</span>
+              <span style="font-size:11px;font-weight:800;color:var(--accent);">01</span>
               <span style="font-size:13px;font-weight:800;color:#111;letter-spacing:-0.01em;">장소 선정</span>
             </div>
             <p style="font-size:13px;color:var(--text-mid);line-height:1.7;margin:0;">타깃(20대) 이동 동선·유동인구·공간 분위기 기준으로 후보 3곳 비교 후 뚝섬역 앞 카페 선정 후 대관</p>
@@ -1536,7 +1536,7 @@ footer span { font-size: 11px; color: var(--text-light); }
           <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;display:flex;flex-direction:column;gap:0.9rem;">
             <div>
               <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;">
-                <span style="font-size:11px;font-weight:800;color:#ccc;">02</span>
+                <span style="font-size:11px;font-weight:800;color:var(--accent);">02</span>
                 <span style="font-size:13px;font-weight:800;color:#111;letter-spacing:-0.01em;">셀러 모집·품질 관리</span>
               </div>
               <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:0.4rem;">셀러 모집</div>
@@ -1551,19 +1551,19 @@ footer span { font-size: 11px; color: var(--text-light); }
           <!-- 카드 3: 온라인 홍보 -->
           <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;">
             <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;">
-              <span style="font-size:11px;font-weight:800;color:#ccc;">03</span>
+              <span style="font-size:11px;font-weight:800;color:var(--accent);">03</span>
               <span style="font-size:13px;font-weight:800;color:#111;letter-spacing:-0.01em;">온라인 홍보</span>
             </div>
             <p style="font-size:13px;color:var(--text-mid);line-height:1.7;margin:0 0 0.75rem 0;">인스타그램 37개 게시물, 누적 조회수 29,000회. 단일 게시물 조회수 <strong style="color:#222;">26,629회</strong>, 비팔로워 도달률 <strong style="color:#222;">63.3%</strong> 달성</p>
-            <div style="background:var(--light);border-radius:8px;overflow:hidden;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;">
-              <img src="게시물 조회수.jpg" style="width:100%;height:100%;object-fit:cover;display:block;">
-            </div>
+            <button onclick="openImgModal('게시물 조회수.jpg')" style="margin-top:0.5rem;display:flex;align-items:center;gap:0.4rem;background:none;border:1px solid var(--border);border-radius:8px;padding:0.5rem 0.9rem;font-size:12px;color:var(--text-mid);cursor:pointer;transition:background 0.15s;" onmouseover="this.style.background='var(--light)'" onmouseout="this.style.background='none'">
+              <span style="font-size:14px;">🔍</span> 게시물 인사이트 보기
+            </button>
           </div>
 
           <!-- 카드 4: 오프라인 홍보 -->
           <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;">
             <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;">
-              <span style="font-size:11px;font-weight:800;color:#ccc;">04</span>
+              <span style="font-size:11px;font-weight:800;color:var(--accent);">04</span>
               <span style="font-size:13px;font-weight:800;color:#111;letter-spacing:-0.01em;">오프라인 홍보</span>
             </div>
             <ul style="list-style:none;margin:0 0 0.75rem 0;padding:0;display:flex;flex-direction:column;gap:0.4rem;">
@@ -1572,9 +1572,9 @@ footer span { font-size: 11px; color: var(--text-light); }
               <li style="font-size:13px;color:var(--text-mid);line-height:1.6;"><span style="font-weight:700;color:#555;margin-right:0.4rem;">카피</span><em>'옷 좋아하는 대학생들이 연 플리마켓, 걸어서 2분'</em></li>
               <li style="font-size:13px;color:var(--text-mid);line-height:1.6;"><span style="font-weight:700;color:#555;margin-right:0.4rem;">혜택</span>전단지 지참 시 아이스 음료 1잔 무료</li>
             </ul>
-            <div style="background:var(--light);border-radius:8px;overflow:hidden;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;">
-              <img src="전단지.jpeg" style="width:100%;height:100%;object-fit:cover;display:block;">
-            </div>
+            <button onclick="openImgModal('전단지.jpeg')" style="margin-top:0.5rem;display:flex;align-items:center;gap:0.4rem;background:none;border:1px solid var(--border);border-radius:8px;padding:0.5rem 0.9rem;font-size:12px;color:var(--text-mid);cursor:pointer;transition:background 0.15s;" onmouseover="this.style.background='var(--light)'" onmouseout="this.style.background='none'">
+              <span style="font-size:14px;">🔍</span> 전단지 사진 보기
+            </button>
           </div>
 
         </div>
@@ -1961,6 +1961,19 @@ footer span { font-size: 11px; color: var(--text-light); }
   }, { threshold: 0.15 });
   observer.observe(grid);
 })();
+</script>
+
+<!-- 이미지 팝업 모달 -->
+<div id="img-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;" onclick="this.style.display='none'">
+  <img id="img-modal-src" src="" style="max-width:90vw;max-height:90vh;border-radius:12px;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,0.5);">
+  <button onclick="document.getElementById('img-modal').style.display='none'" style="position:absolute;top:1.5rem;right:1.5rem;background:rgba(255,255,255,0.15);border:none;color:#fff;font-size:1.5rem;width:2.5rem;height:2.5rem;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>
+</div>
+<script>
+function openImgModal(src){
+  var m=document.getElementById('img-modal');
+  document.getElementById('img-modal-src').src=src;
+  m.style.display='flex';
+}
 </script>
 </body>
 </html>
