@@ -86,32 +86,28 @@ body {
 /* ── HERO — white, clean ── */
 .hero {
   background: var(--white);
-  padding: 90px var(--side) 70px;
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
 }
 .hero-inner {
-  max-width: var(--container);
-  margin: 0 auto;
-  width: 100%;
   display: flex;
-  align-items: center;
-  gap: 4rem;
+  min-height: 520px;
 }
 .hero-left {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+  padding: 90px 4rem 70px;
+  background: var(--white);
   text-align: left;
+  align-items: flex-start;
 }
 .hero-photo-wrap { margin-bottom: 0; }
 .hero-photo {
-  width: 160px; height: 160px;
-  border-radius: 50%;
+  width: 100%; height: 100%;
+  border-radius: 0;
   object-fit: cover; object-position: center top;
-  border: 4px solid var(--white);
-  box-shadow: var(--shadow-md);
-  margin-bottom: 1.8rem;
 }
 .hero-photo-placeholder { width: 110px; height: 110px; border-radius: 50%; background: var(--light); display: flex; align-items: center; justify-content: center; font-size: 40px; color: var(--text-light); margin-bottom: 1.5rem; }
 .hero-eyebrow {
@@ -157,7 +153,7 @@ body {
 .hero-kpi { display: flex; flex-direction: column; gap: 3px; }
 .hero-kpi-num { font-size: 20px; font-weight: 900; color: var(--accent); letter-spacing: -0.02em; }
 .hero-kpi-lbl { font-size: 11px; color: var(--text-light); font-weight: 500; }
-.hero-right { flex: 0 0 340px; }
+.hero-right { flex: 0 0 38%; background: #FFF0E6; overflow: hidden; }
 .hero-project-card-stack { display: flex; flex-direction: column; gap: 0.75rem; }
 
 /* ── SECTION CARD WRAPPER (Creatrip style rounded containers) ── */
@@ -518,19 +514,19 @@ footer span { font-size: 11px; color: var(--text-light); }
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-inner" style="justify-content:center;">
-    <div class="hero-left" style="align-items:center;text-align:center;max-width:640px;">
-      <div class="hero-photo-wrap">
-        <img src="취업사진 copy.jpg" class="hero-photo" alt="문채린">
-      </div>
-      <div class="hero-eyebrow">마케터 포트폴리오 · 2026</div>
-      <h1 class="hero-name">문채린</h1>
-      <p class="hero-desc">
-        고객 반응과 데이터를 성과로 연결하는 지원자 문채린입니다.
-      </p>
-      <div class="hero-cta-row" style="justify-content:center;">
+  <div class="hero-inner">
+    <!-- 왼쪽: 텍스트 -->
+    <div class="hero-left">
+      <div style="font-size:12px;font-weight:600;color:var(--text-light);letter-spacing:0.08em;margin-bottom:1.2rem;">기획부터 실행까지, 마케터 문채린</div>
+      <h1 class="hero-name" style="font-size:clamp(22px,2vw,30px);margin-bottom:0.6rem;">문채린</h1>
+      <p class="hero-desc" style="font-size:clamp(28px,3.2vw,46px);font-weight:900;line-height:1.2;color:var(--text);letter-spacing:-0.02em;margin-bottom:2.5rem;">고객 반응을<br>성과로 바꾸는<br>마케터입니다.</p>
+      <div class="hero-cta-row">
         <a href="#about" class="hero-btn-primary">프로젝트 보기 →</a>
       </div>
+    </div>
+    <!-- 오른쪽: 사진 -->
+    <div class="hero-right">
+      <img src="취업사진 copy.jpg" class="hero-photo" alt="문채린">
     </div>
   </div>
 </section>
@@ -1747,7 +1743,6 @@ footer span { font-size: 11px; color: var(--text-light); }
 <!-- FOOTER -->
 <footer>
   <span>문채린 — 마케터 포트폴리오 2026</span>
-  <span>콘텐츠 마케팅 · 마케팅 기획</span>
 </footer>
 
 
