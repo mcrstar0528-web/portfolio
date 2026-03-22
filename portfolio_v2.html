@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>문채린 | 마케터 포트폴리오</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+<style>
+/* =========================================================
+   DESIGN SYSTEM — clean, airy, Creatrip-inspired
+   ========================================================= */
+:root {
+  --white: #ffffff;
+  --bg: #f4f6f8;
+  --off-white: #f8f9fb;
+  --light: #eef0f3;
+  --border: #e4e7ec;
+  --border-mid: #cdd2da;
+  --text: #111827;
+  --text-mid: #4b5563;
+  --text-light: #9ca3af;
+  --accent: #FF6B35;
+  --accent-light: #FFF2EC;
+  --accent-mid: #FFBF9A;
+  --dark: #111827;
+  --warm: #f59e0b;
+  --warm-light: #fef3c7;
+  --red: #ef4444;
+  --red-light: #fef2f2;
+  --green: #22c55e;
+  --green-light: #f0fdf4;
+  --teal: #0ea5e9;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.10);
+  --font: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  --container: 1100px;
+  --side: 2rem;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: clip;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── CONTAINER ── */
+.wrap {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--side);
+}
+
+/* ── NAV ── */
+#main-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  height: 60px;
+}
+#main-nav .nav-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--side);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo { font-size: 16px; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: 13px; color: var(--text-light); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(--text); }
+
+/* ── HERO — white, clean ── */
+.hero {
+  background: var(--white);
+  padding: 90px var(--side) 70px;
+  border-bottom: 1px solid var(--border);
+}
+.hero-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+.hero-photo-wrap { margin-bottom: 0; }
+.hero-photo {
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  object-fit: cover; object-position: center top;
+  border: 4px solid var(--white);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 1.8rem;
+}
+.hero-photo-placeholder { width: 110px; height: 110px; border-radius: 50%; background: var(--light); display: flex; align-items: center; justify-content: center; font-size: 40px; color: var(--text-light); margin-bottom: 1.5rem; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--accent); margin-bottom: 1rem;
+  padding: 4px 12px; border: 1px solid var(--accent-mid); border-radius: 100px;
+  background: var(--accent-light);
+}
+.hero-name {
+  font-size: clamp(40px, 4.5vw, 60px);
+  font-weight: 900; line-height: 1.05; letter-spacing: -0.03em;
+  color: var(--text); margin-bottom: 1rem;
+}
+.hero-name .accent-dot { color: var(--accent); }
+.hero-desc {
+  font-size: 18px; color: var(--text); font-weight: 500; line-height: 1.75;
+  max-width: 540px; margin-bottom: 2.5rem;
+}
+.hero-cta-row { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 2.5rem; }
+.hero-btn-primary {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.9rem 2rem; background: var(--accent);
+  color: #fff; font-size: 15px; font-weight: 700;
+  border-radius: 100px; text-decoration: none;
+  box-shadow: 0 4px 16px rgba(255,107,53,0.3);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.hero-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(255,107,53,0.4); }
+.hero-btn-secondary {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.75rem 1.4rem; background: var(--white);
+  color: var(--text-mid); font-size: 14px; font-weight: 600;
+  border-radius: 100px; text-decoration: none;
+  border: 1px solid var(--border);
+  transition: border-color 0.18s, color 0.18s;
+}
+.hero-btn-secondary:hover { border-color: var(--accent-mid); color: var(--accent); }
+.hero-kpi-row {
+  display: flex; gap: 1.5rem;
+  padding-top: 2rem; border-top: 1px solid var(--border);
+}
+.hero-kpi { display: flex; flex-direction: column; gap: 3px; }
+.hero-kpi-num { font-size: 20px; font-weight: 900; color: var(--accent); letter-spacing: -0.02em; }
+.hero-kpi-lbl { font-size: 11px; color: var(--text-light); font-weight: 500; }
+.hero-right { flex: 0 0 340px; }
+.hero-project-card-stack { display: flex; flex-direction: column; gap: 0.75rem; }
+
+/* ── SECTION CARD WRAPPER (Creatrip style rounded containers) ── */
+.section-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  margin: 2rem auto;
+  max-width: var(--container);
+  padding: 4rem 3rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+.section-card-full {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 4rem 3rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+.page-bg {
+  background: var(--bg);
+  padding: 2rem var(--side);
+}
+
+/* ── SECTION BASE ── */
+.section-wrap { padding: 5rem 0; }
+.section-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--side);
+}
+.section-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.16em; color: var(--accent);
+  margin-bottom: 3rem; display: flex; align-items: center; gap: 1rem;
+}
+.section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.section-heading {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 900; line-height: 1.15; letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
+}
+.section-heading em { font-style: normal; color: var(--accent); }
+.section-sub { font-size: 14px; color: var(--text-mid); line-height: 1.75; }
+
+/* ── HOW I WORK ── */
+.how-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start; }
+.how-heading { font-size: clamp(26px, 3vw, 38px); font-weight: 900; line-height: 1.2; letter-spacing: -0.025em; }
+.how-heading em { font-style: normal; color: var(--accent); }
+.how-step-flow { display: flex; align-items: stretch; gap: 0.75rem; }
+.how-step-card {
+  flex: 1; padding: 1.6rem 1.4rem;
+  background: var(--off-white); border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.how-step-card .step-label { font-size: 10px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.6rem; }
+.how-step-card .step-title { font-size: 14px; font-weight: 800; color: var(--text); line-height: 1.4; margin-bottom: 0.5rem; }
+.how-step-card .step-desc-text { font-size: 12px; color: var(--text-mid); line-height: 1.7; }
+.how-flow-arrow { display: flex; align-items: center; color: var(--border-mid); font-size: 18px; flex-shrink: 0; }
+
+/* ── PROJ NAV CARDS ── */
+.project-cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.proj-nav-card {
+  display: block; padding: 1.2rem 1.4rem;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-md); text-decoration: none;
+  transition: all 0.22s; box-shadow: var(--shadow-xs);
+}
+.proj-nav-card:hover { border-color: var(--accent-mid); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.proj-nav-num { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 0.4rem; }
+.proj-nav-title { font-size: 13px; font-weight: 800; color: #111; line-height: 1.35; margin-bottom: 0.45rem; }
+.proj-nav-metric { font-size: 12px; font-weight: 700; color: var(--accent); }
+.proj-nav-tags { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.proj-nav-tag { font-size: 10px; padding: 2px 7px; background: var(--off-white); border: 1px solid var(--border); border-radius: 100px; color: var(--text-light); font-weight: 500; }
+
+/* ── PROJECTS ── */
+#projects { background: var(--bg); }
+.projects-header { max-width: var(--container); margin: 0 auto; padding: 3rem var(--side) 0; }
+.project-section { }
+.project-section-inner {
+  max-width: var(--container);
+  margin: 1.5rem auto;
+  padding: 3rem;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.project-meta { display: grid; grid-template-columns: 56px 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+.proj-num { font-size: 12px; font-weight: 700; color: var(--text-light); padding-top: 4px; font-variant-numeric: tabular-nums; }
+.proj-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.85rem; }
+.tag {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.05em;
+  padding: 4px 10px; border: 1px solid var(--border);
+  border-radius: 100px; color: var(--text-mid);
+  background: var(--off-white);
+}
+.tag.featured { background: var(--accent); color: white; border-color: var(--accent); }
+.proj-title { font-size: clamp(20px, 2.5vw, 30px); font-weight: 900; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 0.7rem; }
+.proj-subtitle { font-size: 14px; color: var(--text-mid); line-height: 1.85; max-width: 600px; margin-bottom: 1.5rem; }
+.proj-metrics { display: flex; gap: 2rem; flex-wrap: wrap; }
+.metric { display: flex; flex-direction: column; gap: 3px; }
+.metric-val { font-size: 22px; font-weight: 900; color: var(--accent); letter-spacing: -0.02em; }
+.metric-val.up { color: var(--red); }
+.metric-label { font-size: 11px; color: var(--text-light); font-weight: 500; }
+
+/* ── CASE CONTENT ── */
+.case-content { padding-left: 72px; }
+.case-section { margin-bottom: 2.5rem; }
+.case-title {
+  font-size: 10px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.14em; color: var(--text-light);
+  margin-bottom: 1.2rem; padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Flow */
+.case-flow { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.flow-box {
+  background: var(--off-white); border: 1px solid var(--border);
+  padding: 0.65rem 1rem; font-size: 13px; font-weight: 500;
+  border-radius: var(--radius-sm); line-height: 1.5;
+}
+.flow-box.highlight { background: var(--accent); color: white; border-color: var(--accent); }
+.flow-arrow { color: var(--border-mid); font-size: 15px; }
+
+/* Insight */
+.case-insight {
+  background: var(--warm-light); border-left: 3px solid var(--warm);
+  padding: 1rem 1.2rem; font-size: 13px; line-height: 1.85;
+  margin-bottom: 1.5rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--text-mid);
+}
+.case-insight strong { color: var(--text); }
+
+/* Selection reason */
+.selection-reason {
+  background: var(--accent-light); border: 1px solid var(--accent-mid);
+  border-left: 4px solid var(--accent); padding: 1rem 1.2rem;
+  font-size: 13px; line-height: 1.85; margin-bottom: 1.5rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0; color: var(--text-mid);
+}
+.selection-reason strong { color: var(--accent); }
+
+/* Before/After */
+.before-after { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1.5rem; align-items: start; margin-bottom: 1.5rem; }
+.ba-col h4 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.8rem; padding: 4px 10px; display: inline-block; border-radius: 100px; }
+.ba-col.before h4 { background: var(--light); color: var(--text-light); }
+.ba-col.after h4 { background: var(--accent); color: white; }
+.ba-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.ba-col li { font-size: 13px; line-height: 1.65; color: var(--text-mid); padding-left: 1rem; position: relative; }
+.ba-col li::before { content: "—"; position: absolute; left: 0; color: var(--border-mid); }
+.ba-arrow { display: flex; align-items: center; justify-content: center; font-size: 22px; color: var(--accent); padding-top: 1.5rem; }
+
+/* Data table */
+.data-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 1rem; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
+.data-table th { background: var(--dark); color: white; padding: 0.7rem 1rem; text-align: left; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; }
+.data-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--border); background: var(--white); }
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr.winner td { background: var(--warm-light); font-weight: 600; }
+.data-table .num { font-variant-numeric: tabular-nums; }
+.data-table .red { color: var(--red); font-weight: 700; }
+
+/* Timeline chart */
+.timeline-chart { margin-bottom: 1.5rem; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+.chart-row { display: grid; grid-template-columns: 120px repeat(5, 1fr); font-size: 12px; border-bottom: 1px solid var(--border); }
+.chart-row:last-child { border-bottom: none; }
+.chart-row.header { background: var(--dark); color: white; font-size: 10px; font-weight: 600; letter-spacing: 0.05em; }
+.chart-cell { padding: 0.75rem 0.85rem; font-variant-numeric: tabular-nums; }
+.chart-row.header .chart-cell { color: rgba(255,255,255,0.5); }
+.chart-row.header .chart-cell.active-col { color: white; background: var(--accent); }
+.chart-cell.label { font-weight: 700; color: var(--text); background: var(--off-white); }
+.chart-cell.result { color: var(--red); font-weight: 700; background: var(--red-light); }
+.chart-cell.test { color: var(--text-light); font-style: italic; background: var(--light); font-size: 11px; }
+
+/* Result boxes */
+.result-boxes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 1.5rem; }
+.result-box { background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.2rem; text-align: center; }
+.result-box .val { font-size: 22px; font-weight: 900; color: var(--accent); line-height: 1.1; margin-bottom: 0.3rem; letter-spacing: -0.02em; }
+.result-box .lbl { font-size: 11px; color: var(--text-light); line-height: 1.4; }
+
+/* Media grid */
+.media-grid { display: grid; gap: 1rem; margin-bottom: 1.5rem; }
+.media-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.media-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.media-item { position: relative; overflow: hidden; border-radius: var(--radius-md); background: var(--dark); border: 1px solid var(--border); }
+.media-item a { display: block; text-decoration: none; }
+.media-item img { width: 100%; display: block; transition: opacity 0.2s; }
+.media-item:hover img { opacity: 0.85; }
+.media-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 0.8rem; display: flex; align-items: flex-end; justify-content: space-between; }
+.media-label { font-size: 10px; color: white; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.media-play { width: 28px; height: 28px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--text); }
+.media-stat { font-size: 11px; color: rgba(255,255,255,0.8); margin-top: 2px; }
+.media-item.reel { aspect-ratio: 9/16; max-height: 280px; }
+.media-item.reel a { height: 100%; }
+.media-item.landscape { height: 180px; }
+
+/* Kakao chat */
+.kakao-chat-wrap { background: #b2c7d8; border-radius: var(--radius-md); padding: 20px; }
+.kakao-chat-header { text-align: center; color: #fff; font-size: 12px; margin-bottom: 16px; opacity: 0.8; }
+.kakao-msg-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+.kakao-avatar { width: 36px; height: 36px; border-radius: 50%; background: #FFE812; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #333; flex-shrink: 0; }
+.kakao-bubble { background: #fff; border-radius: 0 12px 12px 12px; padding: 10px 14px; font-size: 13px; line-height: 1.7; color: #222; max-width: 340px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.kakao-bubble.yellow { background: #FFE812; }
+.kakao-sender { font-size: 11px; font-weight: 600; color: #333; margin-bottom: 4px; }
+.kakao-insta-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 6px 10px; background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); border-radius: 8px; color: #fff; font-size: 12px; font-weight: 600; text-decoration: none; }
+.kakao-insta-link svg { width: 14px; height: 14px; fill: white; }
+.msg-compare-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+.msg-compare-col { display: flex; flex-direction: column; }
+.msg-compare-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; padding: 4px 12px; border-radius: 100px; display: inline-block; }
+.msg-compare-label.before { background: var(--light); color: #666; }
+.msg-compare-label.after { background: var(--dark); color: #fff; }
+
+/* Discovery grid */
+.discovery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; align-items: start; }
+.discovery-card { border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-xs); }
+.discovery-card-header { padding: 0.75rem 1rem; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; min-height: 36px; display: flex; align-items: center; }
+.discovery-card.before .discovery-card-header { background: var(--light); color: var(--text-light); }
+.discovery-card.after .discovery-card-header { background: var(--accent); color: white; }
+.discovery-card-body { padding: 1rem; background: var(--white); flex: 1; }
+.call-transcript { font-size: 12px; line-height: 1.75; color: var(--text-mid); background: var(--off-white); border-radius: var(--radius-sm); padding: 0.8rem; margin-bottom: 0.8rem; border-left: 3px solid var(--border-mid); }
+.call-transcript.highlight-after { border-left-color: var(--accent); background: var(--accent-light); }
+.call-highlight { font-weight: 700; color: var(--accent); }
+.discovery-result-tag { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 100px; }
+.discovery-result-tag.fail { background: var(--red-light); color: var(--red); }
+.discovery-result-tag.win { background: var(--green-light); color: var(--green); }
+
+/* Invest grid */
+.invest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+.invest-card { padding: 1.2rem; background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius-md); font-size: 13px; color: var(--text-mid); line-height: 1.75; }
+
+/* Kakao annotation */
+.kakao-annotation { font-size: 10px; font-weight: 700; color: var(--accent); background: var(--accent-light); border: 1px solid var(--accent-mid); border-radius: 4px; padding: 1px 5px; margin-left: 3px; white-space: nowrap; }
+
+/* Revenue highlights */
+.month-gray { background: #f0f0f0 !important; color: #aaa !important; }
+.month-orange { background: var(--accent-light) !important; color: var(--accent) !important; font-weight: 700 !important; }
+
+/* img grid */
+.img-grid { display: grid; gap: 0.75rem; margin-bottom: 1.5rem; }
+.img-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+.img-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+.img-item { border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); }
+.img-item img { width: 100%; display: block; }
+.img-item-label { font-size: 11px; color: var(--text-light); padding: 0.5rem 0.7rem; background: var(--off-white); text-align: center; font-weight: 600; }
+
+/* Video timeline */
+.video-timeline { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+.vt-row { display: grid; grid-template-columns: 70px 1fr; gap: 1.5rem; align-items: start; }
+.vt-label { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
+.vt-badge { font-size: 12px; font-weight: 700; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.vt-badge.v1 { background: var(--light); color: var(--text-mid); border: 2px solid var(--border-mid); }
+.vt-badge.v2 { background: var(--accent-light); color: var(--accent); border: 2px solid var(--accent-mid); }
+.vt-badge.v3 { background: var(--accent); color: white; }
+.vt-line { width: 2px; height: 28px; background: var(--border); border-radius: 2px; }
+.vt-content { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-xs); }
+.vt-content-header { padding: 0.9rem 1rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+.vt-event-name { font-size: 13px; font-weight: 700; color: var(--text); }
+.vt-views { font-size: 20px; font-weight: 900; letter-spacing: -0.02em; }
+.vt-views.low { color: var(--text-mid); }
+.vt-views.high { color: var(--accent); }
+.vt-views-label { font-size: 11px; color: var(--text-light); }
+.vt-content-body { padding: 0.8rem 1rem; display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap; }
+.vt-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 12px; font-weight: 600; color: var(--accent); text-decoration: none; padding: 4px 10px; border: 1px solid var(--accent-mid); border-radius: 100px; background: var(--accent-light); transition: all 0.2s; }
+.vt-link:hover { background: var(--accent); color: white; }
+.vt-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.vt-tag { font-size: 11px; font-weight: 600; color: var(--text-mid); padding: 3px 9px; background: var(--off-white); border: 1px solid var(--border); border-radius: 100px; }
+.vt-tag.improvement { color: var(--green); background: var(--green-light); border-color: #86efac; }
+.vt-tag.low-perf { color: var(--red); background: var(--red-light); border-color: #fca5a5; }
+.vt-progression { display: flex; align-items: center; gap: 0.8rem; padding: 1rem; background: var(--green-light); border: 1px solid #86efac; border-radius: var(--radius-md); }
+.vt-prog-arrow { font-size: 18px; color: var(--green); font-weight: 800; }
+.vt-prog-item { text-align: center; }
+.vt-prog-num { font-size: 16px; font-weight: 800; color: var(--text); }
+.vt-prog-lbl { font-size: 10px; color: var(--text-light); }
+.vt-prog-result { font-size: 13px; font-weight: 700; color: var(--green); padding: 4px 10px; background: white; border-radius: 20px; border: 1px solid #86efac; }
+.vt-thumb { display: block; position: relative; }
+.vt-thumb img { width: 100%; height: 180px; object-fit: cover; display: block; }
+.vt-thumb-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.28); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s; }
+.vt-thumb:hover .vt-thumb-overlay { opacity: 1; }
+.vt-thumb-play { width: 42px; height: 42px; background: rgba(255,255,255,0.92); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; color: var(--text); }
+
+/* Skills */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.skill-group h3 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-light); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+.skill-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.skill-chip { font-size: 13px; font-weight: 500; padding: 6px 14px; border: 1px solid var(--border); border-radius: 100px; color: var(--text-mid); background: var(--white); transition: all 0.18s; cursor: default; }
+.skill-chip:hover { border-color: var(--accent-mid); color: var(--accent); background: var(--accent-light); }
+
+/* Experience */
+.exp-list { display: flex; flex-direction: column; }
+.exp-item { display: grid; grid-template-columns: 160px 1fr; gap: 2rem; padding: 2.5rem 0; border-bottom: 1px solid var(--border); }
+.exp-item:last-child { border-bottom: none; }
+.exp-date { font-size: 12px; color: var(--text-light); line-height: 1.8; }
+.exp-type { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; padding: 3px 9px; background: var(--light); border-radius: 100px; color: var(--text-light); text-transform: uppercase; margin-top: 4px; }
+.exp-company { font-size: 17px; font-weight: 800; margin-bottom: 0.3rem; letter-spacing: -0.01em; }
+.exp-role { font-size: 13px; color: var(--text-light); margin-bottom: 0.8rem; }
+.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+.exp-bullets li { font-size: 13px; line-height: 1.75; color: var(--text-mid); padding-left: 1.2rem; position: relative; }
+.exp-bullets li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-size: 11px; }
+
+/* Contact */
+.contact-section { background: var(--dark); color: white; text-align: center; padding: 6rem 2rem; }
+.contact-title { font-size: clamp(30px, 5vw, 56px); font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 0.75rem; }
+.contact-title em { font-style: normal; color: var(--warm); }
+.contact-subtitle { font-size: 14px; color: rgba(255,255,255,0.45); margin-bottom: 2.5rem; }
+.contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.contact-link { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.65); text-decoration: none; padding: 0.75rem 1.8rem; border: 1px solid rgba(255,255,255,0.12); border-radius: 100px; transition: all 0.2s; }
+.contact-link:hover { background: var(--warm); color: var(--text); border-color: var(--warm); }
+
+/* Footer */
+footer { padding: 1.5rem 2rem; border-top: 1px solid var(--border); display: flex; justify-content: center; align-items: center; background: var(--white); gap: 2rem; }
+footer span { font-size: 11px; color: var(--text-light); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  :root { --side: 1.25rem; }
+  .hero-inner { flex-direction: column; gap: 2rem; }
+  .hero-right { flex: none; width: 100%; }
+  .hero-left { align-items: center; text-align: center; }
+  .hero-desc { max-width: 100%; }
+  .hero-kpi-row { justify-content: center; }
+  .project-cards-grid { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .how-step-flow { flex-direction: column; }
+  .case-content { padding-left: 0; }
+  .before-after { grid-template-columns: 1fr; gap: 1rem; }
+  .ba-arrow { display: none; }
+  .result-boxes { grid-template-columns: 1fr 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  .section-card, .project-section-inner { padding: 2rem 1.5rem; margin: 1rem auto; }
+  .projects-header { padding: 2rem var(--side) 0; }
+  nav { padding: 0; }
+  .nav-links { display: none; }
+  .media-grid.cols-3 { grid-template-columns: 1fr; }
+  .discovery-grid { grid-template-columns: 1fr; }
+  .msg-compare-wrap { grid-template-columns: 1fr; }
+  .chart-row { grid-template-columns: 80px repeat(5, 1fr); font-size: 10px; }
+  .contact-section { padding: 4rem 1.5rem; }
+  footer { padding: 1rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <div class="nav-logo">문채린<span>.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">소개</a></li>
+      <li><a href="#projects">프로젝트</a></li>
+      <li><a href="#skills">스킬</a></li>
+      <li><a href="#experience">경험</a></li>
+      <li><a href="#contact">연락처</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-inner" style="justify-content:center;">
+    <div class="hero-left" style="align-items:center;text-align:center;max-width:640px;">
+      <div class="hero-photo-wrap">
+        <img src="취업사진 copy.jpg" class="hero-photo" alt="문채린">
+      </div>
+      <div class="hero-eyebrow">마케터 포트폴리오 · 2026</div>
+      <h1 class="hero-name">문채린</h1>
+      <p class="hero-desc">
+        고객 반응과 데이터를 성과로 연결하는 지원자 문채린입니다.
+      </p>
+      <div class="hero-cta-row" style="justify-content:center;">
+        <a href="#about" class="hero-btn-primary">프로젝트 보기 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW I WORK -->
+<div id="about" style="background:var(--bg);padding:2.5rem var(--side);">
+  <div style="max-width:var(--container);margin:0 auto;background:var(--white);border-radius:var(--radius-lg);padding:3.5rem 3rem;border:1px solid var(--border);box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+  <div class="section-label">일하는 방식</div>
+  <div class="how-grid">
+    <div>
+      <h2 class="how-heading">어떤 프로젝트든<br>이 3단계로<br><em>성과를 만들었습니다.</em></h2>
+    </div>
+    <div class="how-step-flow" style="gap:0.75rem;">
+      <div class="how-step-card" style="background:#FFE8D6;border-color:#f5c9a8;">
+        <div class="step-label">Step 1</div>
+        <div class="step-title">고객이 왜 반응하지 않는지 찾음</div>
+        <div class="step-desc-text">데이터와 현장 관찰을 바탕으로 반응 저해 요인을 파악합니다.</div>
+      </div>
+      <div class="how-flow-arrow" style="color:var(--accent);opacity:0.5;">→</div>
+      <div class="how-step-card" style="background:#FFCBA4;border-color:#f0a870;">
+        <div class="step-label">Step 2</div>
+        <div class="step-title">메시지·콘텐츠·운영 방식을 다시 설계</div>
+        <div class="step-desc-text">타깃에 맞는 설득 포인트와 참여 구조를 구체적 실행안으로 바꿉니다.</div>
+      </div>
+      <div class="how-flow-arrow" style="color:var(--accent);opacity:0.5;">→</div>
+      <div class="how-step-card" style="background:#FF7E36;border-color:#FF7E36;">
+        <div class="step-label" style="color:rgba(255,255,255,0.8);">Step 3</div>
+        <div class="step-title" style="color:#fff;">실제 전환과 성과로 연결</div>
+        <div class="step-desc-text" style="color:rgba(255,255,255,0.85);">단순 노출을 넘어 참여, 문의, 매출로 이어지는 결과를 만들어왔습니다.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 프로젝트 카드 — Steps 아래 한 줄 나열 -->
+  <div style="margin-top: 2.5rem;">
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.16em;color:var(--text-light);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem;">프로젝트 <span style="flex:1;height:1px;background:var(--border);display:inline-block;"></span><span style="font-size:10px;font-weight:600;color:var(--text-light);letter-spacing:0.02em;">클릭 시 해당 프로젝트로 이동 →</span></div>
+    <div id="proj-card-grid" style="display:grid; grid-template-columns: repeat(6,1fr); gap:0.6rem;">
+      <a class="proj-nav-card" href="#project-1">
+        <div class="proj-nav-num">01</div>
+        <div class="proj-nav-title">Culcom 고객관리·상담전환 개선</div>
+        <div class="proj-nav-metric">노쇼율 19.7%p↓ · 매출 +29.5%</div>
+        <div class="proj-nav-tags">
+          <span class="proj-nav-tag">A/B 테스트</span>
+          <span class="proj-nav-tag">CRM</span>
+        </div>
+        <div style="margin-top:0.6rem;font-size:14px;color:var(--accent);display:flex;align-items:center;gap:0.2rem;">↗</div>
+      </a>
+      <a class="proj-nav-card" href="#project-2">
+        <div class="proj-nav-num">02</div>
+        <div class="proj-nav-title">호주 이벤트사 협업 릴스 기획</div>
+        <div class="proj-nav-metric">조회수 5.4배 · 티켓 2배</div>
+        <div class="proj-nav-tags">
+          <span class="proj-nav-tag">콘텐츠 기획</span>
+          <span class="proj-nav-tag">훅 설계</span>
+        </div>
+        <div style="margin-top:0.6rem;font-size:14px;color:var(--accent);display:flex;align-items:center;gap:0.2rem;">↗</div>
+      </a>
+      <a class="proj-nav-card" href="#project-3">
+        <div class="proj-nav-num">03</div>
+        <div class="proj-nav-title">Culcom 오프라인 이벤트 기획</div>
+        <div class="proj-nav-metric">참여자 2.25배 · 매출 2.55배</div>
+        <div class="proj-nav-tags">
+          <span class="proj-nav-tag">이벤트 기획</span>
+          <span class="proj-nav-tag">프로모션</span>
+        </div>
+        <div style="margin-top:0.6rem;font-size:14px;color:var(--accent);display:flex;align-items:center;gap:0.2rem;">↗</div>
+      </a>
+      <a class="proj-nav-card" href="#project-4">
+        <div class="proj-nav-num">04</div>
+        <div class="proj-nav-title">호주 테이블 스타일링 브랜드 론칭</div>
+        <div class="proj-nav-metric">도달 4.5배 · 광고비 0원</div>
+        <div class="proj-nav-tags">
+          <span class="proj-nav-tag">타깃 세분화</span>
+          <span class="proj-nav-tag">전환 최적화</span>
+        </div>
+        <div style="margin-top:0.6rem;font-size:14px;color:var(--accent);display:flex;align-items:center;gap:0.2rem;">↗</div>
+      </a>
+      <a class="proj-nav-card" href="#project-5">
+        <div class="proj-nav-num">05</div>
+        <div class="proj-nav-title">프렌즈마켓 플리마켓 기획</div>
+        <div class="proj-nav-metric">목표 대비 방문객 150% · 매출 119만</div>
+        <div class="proj-nav-tags">
+          <span class="proj-nav-tag">행사 기획</span>
+          <span class="proj-nav-tag">SNS 운영</span>
+        </div>
+        <div style="margin-top:0.6rem;font-size:14px;color:var(--accent);display:flex;align-items:center;gap:0.2rem;">↗</div>
+      </a>
+      <a class="proj-nav-card" href="#project-6">
+        <div class="proj-nav-num">06</div>
+        <div class="proj-nav-title">팀스파르타 교육운영 인턴</div>
+        <div class="proj-nav-metric">만족도 7.2 → 8.8 · 우수사례</div>
+        <div class="proj-nav-tags">
+          <span class="proj-nav-tag">고객 리서치</span>
+          <span class="proj-nav-tag">데이터 분석</span>
+        </div>
+        <div style="margin-top:0.6rem;font-size:14px;color:var(--accent);display:flex;align-items:center;gap:0.2rem;">↗</div>
+      </a>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div id="projects">
+<div class="projects-header" style="background:var(--dark);padding:3rem 3rem 2rem;">
+  <div class="section-label" style="margin-bottom:0;color:rgba(255,255,255,0.35);">
+    <span style="color:rgba(255,255,255,0.35);">프로젝트</span>
+    <span style="flex:1;height:1px;background:rgba(255,255,255,0.1);display:block;"></span>
+  </div>
+</div>
+
+<!-- PROJECT 01 -->
+<div class="project-section" id="project-1">
+  <div class="project-section-inner">
+    <div class="project-meta">
+      <span class="proj-num">01</span>
+      <div>
+        <div class="proj-tags">
+          <span class="tag featured">A/B 테스트</span>
+          <span class="tag">고객 세분화</span>
+          <span class="tag">CRM</span>
+          <span class="tag">노쇼 개선</span>
+        </div>
+        <h2 class="proj-title">성인영어회화교육원 (Culcom)<br>고객관리·상담전환 개선</h2>
+        <p class="proj-subtitle">노쇼율이 타 지점 대비 20% 높고 3개월 연속 상승하는 문제를 발견, 예약 유도 전화와 예약 메시지 2가지 방식으로 동시에 개선해 노쇼율과 월매출을 동시에 반등시켰습니다.</p>
+        <div class="proj-metrics">
+          <div class="metric"><span class="metric-val up">19.7%p↓</span><span class="metric-label">노쇼율</span></div>
+          <div class="metric"><span class="metric-val up">+29.5%</span><span class="metric-label">월매출</span></div>
+          <div class="metric"><span class="metric-val">300명</span><span class="metric-label">최적 메시지 확대</span></div>
+          <div class="metric"><span class="metric-val">전 지점</span><span class="metric-label">표준 운영안 채택</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-content">
+
+      <!-- 문제 발견 -->
+      <div class="case-section">
+        <div class="case-title">문제 발견 과정</div>
+        <div class="case-flow">
+          <div class="flow-box">노쇼율 3개월 연속 상승<br><small style="color:#888">60→62→64.3%</small></div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-box">조사</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-box">실행</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-box highlight">결과</div>
+        </div>
+      </div>
+
+      <!-- 조사 섹션 -->
+      <div class="case-section">
+        <div class="case-title">조사</div>
+        <div class="invest-grid">
+          <div class="invest-card">
+            <strong style="color:var(--text);">① 노쇼율 낮은 인근 지점 벤치마킹</strong><br>
+            → 메시지에 개인화된 요소랑 실제 회화하는 사진 포함<br>
+            → <strong style="color:var(--accent);">메시지 개선 필요</strong>
+          </div>
+          <div class="invest-card">
+            <strong style="color:var(--text);">② 노쇼 고객 10명 재예약 유도 콜 진행</strong><br>
+            — 전화대본에 '무료 회화 자료' 키워드 추가.<br>
+            → 즉각 검증 실시
+          </div>
+        </div>
+      </div>
+
+      <!-- 발견 1 -->
+      <div class="case-section">
+        <div class="case-title">실행 1 — 전화 스크립트 개선 📞</div>
+        <div class="discovery-grid">
+          <div class="discovery-card before">
+            <div class="discovery-card-header">BEFORE</div>
+            <div class="discovery-card-body">
+              <div class="call-transcript">
+                "안녕하세요, 영어회화스터디 컬컴 00점입니다. 상담 예약 주신 것 보고 연락드렸어요. 저희 컬컴은 원어민 강사와 1:1 맞춤 수업으로 빠르게 실력을 올릴 수 있고, 체계적인 커리큘럼으로 단기간에 성과를 내실 수 있어요. 이번 주 00요일 오후 8시에 시간 가능하신가요?"
+              </div>
+              <span class="discovery-result-tag fail">✕</span>
+              <div style="margin-top:0.8rem;font-size:12px;color:var(--text-light);">
+                · 브랜드 소개 중심<br>
+                · 혜택 언급 없음<br>
+                · 개인화 요소 없음
+              </div>
+            </div>
+          </div>
+          <div class="discovery-card after">
+            <div class="discovery-card-header">After — 무료 회화 자료 키워드 추가<br><span style="font-size:10px;font-weight:500;text-transform:none;letter-spacing:0;">(전화 스크립트에 삽입)</span></div>
+            <div class="discovery-card-body">
+              <div class="call-transcript highlight-after">
+                "안녕하세요, 컬컴 00점입니다! 상담 방문 시 실용적인 <span class="call-highlight">맞춤형 무료 회화 자료</span>를 드리고 있어요. 한정 수량이라 방문하시는 분들께만 드리고 있거든요. 이번 주 00요일 오후 8시에 시간 가능하신가요?"
+              </div>
+              <span class="discovery-result-tag win">✓ 10명 중 5명 재예약</span>
+              <div style="margin-top:0.8rem;font-size:12px;color:var(--text-mid);">
+                · 이미 제공 중인 혜택을 언급<br>
+                · 한정 수량 → 손실 회피 심리
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.6rem;">
+          <div class="case-insight" style="border-left-color:var(--accent);background:var(--accent-light);margin-bottom:0;">
+            <strong>핵심 발견(역이용):</strong> 상담 후 "무료 회화 자료"를 이미 제공하고 있었지만, 예약 유도 전화에서는 한 번도 언급하지 않았음.
+          </div>
+          <div class="case-insight" style="border-left-color:var(--green);background:var(--green-light);margin-bottom:0;color:var(--text);">
+            이를 예약 유도 전화 스크립트에 추가 → 노쇼 고객 10명 중 5명 재예약으로 즉각 검증.
+          </div>
+        </div>
+      </div>
+
+      <!-- 발견 2 + 카카오톡 메시지 UI -->
+      <div class="case-section">
+        <div class="case-title">실행 2 — 메시지 A/B 테스트 💬</div>
+
+        <!-- A/B 테스트 표 먼저 (작은 사이즈) -->
+        <div style="margin-bottom:0.8rem;">
+          <table class="data-table" style="font-size:12px;">
+            <thead>
+              <tr>
+                <th style="width:90px;">메시지</th>
+                <th class="num" style="width:80px;">노쇼 수</th>
+                <th class="num" style="width:80px;">예약 수</th>
+                <th class="num">노쇼율</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="opacity:0.65;"><td style="font-size:11px;">메시지 1</td><td class="num" style="font-size:11px;">49명</td><td class="num" style="font-size:11px;">90명</td><td class="num" style="font-size:11px;">54.4%</td></tr>
+              <tr style="opacity:0.65;"><td style="font-size:11px;">메시지 2</td><td class="num" style="font-size:11px;">54명</td><td class="num" style="font-size:11px;">90명</td><td class="num" style="font-size:11px;">60.0%</td></tr>
+              <tr class="winner" id="msg3-row"><td style="font-weight:700;">메시지 3 ✓</td><td class="num">41명</td><td class="num">90명</td><td class="num red">45.5%</td></tr>
+            </tbody>
+          </table>
+          <div style="display:flex;align-items:flex-start;margin:0.4rem 0 0.8rem 0;">
+            <div style="flex:1;"></div>
+            <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;">
+              <span style="font-size:11px;color:var(--accent);font-weight:700;white-space:nowrap;">메시지 3 → After 메시지</span>
+              <div style="width:2px;height:20px;background:var(--accent);border-radius:2px;"></div>
+              <span style="font-size:13px;color:var(--accent);">↓</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="msg-compare-wrap" style="align-items:stretch;">
+          <!-- BEFORE -->
+          <div class="msg-compare-col">
+            <span class="msg-compare-label before">Before — 기존 자동 메시지</span>
+            <div class="kakao-chat-wrap" style="display:flex;flex-direction:column;height:100%;">
+              <div class="kakao-chat-header">예약 전날</div>
+              <div class="kakao-msg-row">
+                <div>
+                  <div class="kakao-avatar">컬컴</div>
+                </div>
+                <div>
+                  <div class="kakao-sender">컬컴</div>
+                  <div class="kakao-bubble">
+                    안녕하세요. 하남 영어회화 컬컴입니다❤️<br>
+                    내일 만나볼 생각에 너무 설레는데요?!🤗<br>
+                    설레는 마음을 안고 인터뷰 전날 Kind reminder 보내드려요!<br>
+                    내일 편안한 마음으로! 오시면 되시구요!<br>
+                    문자를 확인하셨다면 "방문" 남겨주시면 감사하겠습니다!<br><br>
+                    혹시 급한 일정이 생기셨다면 아래 양식에 맞춰서 일정변경 부탁드리겠습니다! 단 지원자가 많아 최대한 참석 하시는걸 권장 드립니다 🥺<br><br>
+                    (본인의 예약시간보다 일찍 오시게 되면 카페처럼 되어있으니 편하게 쉬고 계세요!)<br>
+                    ★ 일정변경은 아래 양식에 맞춰 문자주세요!<br>
+                    ★ 일정변경 신청양식<br>
+                    1.이름 : / 2. 기존예정 방문시간 : / 3. 희망변경 일과 시간:<br>
+                    그럼 정성이 담긴 맛있는 음료 준비해서 기다리겠습니다! 🤩
+                  </div>
+                </div>
+              </div>
+              <!-- 분석 메모 — 파란 배경 공간 안에 삽입 -->
+              <div style="margin-top:auto;padding-top:12px;">
+                <div style="background:#fff;border-radius:8px;padding:10px 12px;">
+                  <div style="font-size:12px;color:var(--red);font-weight:600;line-height:1.8;">
+                    · 이름 없음 (개인화 X)<br>
+                    · 혜택 언급 없음<br>
+                    · 자동 문자처럼 느껴짐 → 무시하기 쉬움
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AFTER -->
+          <div class="msg-compare-col">
+            <span class="msg-compare-label after">After — 메시지 3 (A/B 최우수)</span>
+            <div class="kakao-chat-wrap" style="height:100%;">
+              <div class="kakao-chat-header">예약 전날</div>
+              <div class="kakao-msg-row">
+                <div>
+                  <div class="kakao-avatar">컬컴</div>
+                </div>
+                <div>
+                  <div class="kakao-sender">컬컴</div>
+                  <div class="kakao-bubble yellow">
+                    <span>00님 <span class="kakao-annotation">이름 개인화</span></span>! 안녕하세요. 하남 영어회화 컬컴입니다❤️<br>
+                    내일 만나볼 생각에 너무 설레는데요?!🤗<br>
+                    설레는 마음을 안고 인터뷰 전날 Kind reminder 보내드려요!<br>
+                    내일 <span>00시에 <span class="kakao-annotation">예약 시간 명시</span></span>! 편안한 마음으로 오시면 되시구요!😃<br><br>
+                    📄 상담 후 <span>실용적인 맞춤형 회화 스터디 자료 <span class="kakao-annotation">무료 회화 자료</span></span>를 제공해드리고 있어요! (한정판)<br>
+                    ❤️ 문자를 확인하셨다면 "방문" 남겨주시면 감사하겠습니다!<br>
+                    🚨 👉 <span>상담은 예약제로 <span class="kakao-annotation">손실 키워드</span></span> 진행되며, 불참 시 다음 예약이 지연될 수 있습니다.<br><br>
+                    저희 분위기가 더 궁금하시면 인스타그램에 놀러오세요~!😆<br>
+                    00님과 영어회화 여정을 함께 시작하게 되어 기대돼요! 궁금한 점 있으시면 언제든 알려주세요!<br>
+                    <div style="margin-top:6px;font-size:11px;color:#888;">📸 스터디 사진 포함하여 전송</div>
+                    <a class="kakao-insta-link" href="https://www.instagram.com/culcom_hanam" target="_blank">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                      @culcom_hanam
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div style="padding-top:12px;">
+                <div style="background:#fff;border-radius:8px;padding:10px 12px;">
+                  <div style="font-size:12px;color:var(--green);font-weight:600;line-height:1.8;">
+                    · 이름 개인화 · 예약 시간 명시<br>
+                    · 무료 회화 자료 혜택 언급<br>
+                    · 손실 키워드 ("불참 시 지연")
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="selection-reason" style="margin-top:1rem;">
+          <strong>메시지 3 선정 이유:</strong> 무료 자료 혜택을 앞에 배치하고, 손실 키워드(불참 시 지연)를 뒤에 배치한 구조가 가장 낮은 노쇼율(45.5%)을 기록. 혜택으로 관심을 먼저 유도하고 손실 회피 심리를 자극하는 순서가 효과적이었음.
+        </div>
+        <p style="font-size:12px;color:var(--text-light);margin-top:0.6rem;margin-bottom:0;">→ 메시지 3 최저 노쇼율 확인 후 300명 표본으로 확대 적용</p>
+      </div>
+
+      <!-- 월별 변화 -->
+      <div class="case-section">
+        <div class="case-title">월별 노쇼율 · 매출 변화</div>
+        <div class="timeline-chart">
+          <!-- BEFORE/AFTER 레이블 행 -->
+          <div class="chart-row" style="background:transparent;border-bottom:none;">
+            <div class="chart-cell" style="padding:4px 0;"></div>
+            <div class="chart-cell" style="padding:4px 0;"></div>
+            <div class="chart-cell" style="padding:4px 0;"></div>
+            <div class="chart-cell" style="padding:4px 6px;">
+              <span style="font-size:9px;font-weight:700;background:#ddd;color:#444;padding:2px 7px;border-radius:3px;display:block;text-align:center;white-space:nowrap;">BEFORE</span>
+            </div>
+            <div class="chart-cell" style="padding:4px 0;"></div>
+            <div class="chart-cell" style="padding:4px 6px;">
+              <span style="font-size:9px;font-weight:700;background:var(--accent);color:#fff;padding:2px 7px;border-radius:3px;display:block;text-align:center;white-space:nowrap;">AFTER</span>
+            </div>
+          </div>
+          <div class="chart-row header">
+            <div class="chart-cell"></div>
+            <div class="chart-cell">7월</div>
+            <div class="chart-cell">8월</div>
+            <div class="chart-cell" style="background:#4a4845;font-weight:700;">9월 (최저)</div>
+            <div class="chart-cell">10월<br><span style="font-size:9px;opacity:0.7;">테스트</span></div>
+            <div class="chart-cell active-col">11월</div>
+          </div>
+          <div class="chart-row">
+            <div class="chart-cell label">노쇼율</div>
+            <div class="chart-cell">60.7%</div>
+            <div class="chart-cell">62%</div>
+            <div class="chart-cell" style="background:#e8e8e8;color:var(--text);font-weight:700;">64.3%</div>
+            <div class="chart-cell test">테스트</div>
+            <div class="chart-cell result month-orange">44.6%</div>
+          </div>
+          <div class="chart-row">
+            <div class="chart-cell label">월매출</div>
+            <div class="chart-cell">6,800만</div>
+            <div class="chart-cell">6,700만</div>
+            <div class="chart-cell" style="background:#e8e8e8;color:var(--text);font-weight:700;">6,100만</div>
+            <div class="chart-cell test">테스트</div>
+            <div class="chart-cell result month-orange">7,900만</div>
+          </div>
+          <!-- 개선 지표 행 -->
+          <div class="chart-row" style="background:var(--accent-light);border-top:2px solid var(--accent-mid);">
+            <div class="chart-cell label" style="color:var(--accent);font-size:11px;">개선폭</div>
+            <div class="chart-cell"></div>
+            <div class="chart-cell"></div>
+            <div class="chart-cell" style="font-size:11px;color:var(--text-light);background:transparent;">─</div>
+            <div class="chart-cell"></div>
+            <div class="chart-cell" style="background:transparent;padding:0.5rem 0.8rem;">
+              <div style="font-size:12px;font-weight:800;color:var(--green);">노쇼율 ↓19.7%p</div>
+              <div style="font-size:12px;font-weight:800;color:var(--green);margin-top:2px;">매출 ↑29.5%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 02 -->
+<div class="project-section" id="project-2">
+  <div class="project-section-inner">
+    <div class="project-meta">
+      <span class="proj-num">02</span>
+      <div>
+        <div class="proj-tags">
+          <span class="tag">콘텐츠 기획</span>
+          <span class="tag">훅 설계</span>
+          <span class="tag">CTA 최적화</span>
+        </div>
+        <h2 class="proj-title">호주 현지 이벤트사 (Flow Sydney)<br>협업 콘텐츠 릴스 기획·편집</h2>
+        <p class="proj-subtitle">참여자로 이벤트에 직접 참여 후 인스타그램 운영 문제를 발견, 고성과 릴스 10개 분석으로 훅 구조를 전면 개편해 조회수와 티켓 구매 고객을 2배 이상 확대했습니다.</p>
+        <div class="proj-metrics">
+          <div class="metric"><span class="metric-val up">5.4배</span><span class="metric-label">조회수 (4,136→22,301)</span></div>
+          <div class="metric"><span class="metric-val up">2배</span><span class="metric-label">티켓 구매 고객</span></div>
+          <div class="metric"><span class="metric-val">38배</span><span class="metric-label">공유수 확대</span></div>
+          <div class="metric"><span class="metric-val">3회</span><span class="metric-label">협업 확보</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-content">
+
+      <div class="case-section">
+        <div class="case-title">문제 발견 과정</div>
+        <div class="case-flow">
+          <div class="flow-box">이벤트 참여자 입장으로<br>운영 문제 직접 발견</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-box">인스타그램 개선안과<br>당일 촬영 영상 가안 제작<br>→ 협업 제안</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-box">이벤트 후기형 고성과<br>릴스 10개 AI 활용<br>텍스트 분석</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-box highlight">'외국인 친구' · '가성비'<br>키워드가 1~5초 안에<br>등장 → 훅 구조 개편</div>
+        </div>
+        <div class="case-insight">
+          <strong>핵심 인사이트:</strong> 고성과 릴스는 정보를 많이 담기보다 타깃이 얻는 핵심 가치를 초반 1~5초 안에 배치. 이벤트별로 다른 키워드(외국인 친구·가성비)를 훅에 먼저 노출해야 저장·공유로 이어짐
+        </div>
+      </div>
+
+      <!-- 1차→2차→3차 타임라인 -->
+      <!-- 1차→2차→3차 영상 가로 레이아웃 -->
+      <div class="case-section">
+        <div class="case-title">1차 → 2차 · 3차 개선 타임라인 (조회수 변화)</div>
+
+        <!-- BEFORE / AFTER 구분 레이블 -->
+        <div style="display:grid;grid-template-columns:1fr 40px 2fr;gap:0;align-items:start;margin-bottom:1rem;">
+          <div style="text-align:center;font-size:11px;font-weight:700;padding:4px 10px;background:#f0f0f0;color:#666;border-radius:4px;margin-bottom:0.6rem;">BEFORE</div>
+          <div></div>
+          <div style="text-align:center;font-size:11px;font-weight:700;padding:4px 10px;background:var(--accent);color:#fff;border-radius:4px;margin-bottom:0.6rem;">AFTER</div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 40px 1fr 1fr;gap:0.8rem;align-items:start;">
+
+          <!-- 1차 (BEFORE) -->
+          <div>
+            <div style="font-size:11px;font-weight:700;color:var(--text-light);background:var(--light);border:1px solid var(--border);border-radius:6px;padding:4px 8px;display:inline-block;margin-bottom:0.6rem;">1차 · Meet up</div>
+            <a href="https://www.instagram.com/reel/DRwgCGKk9NV/" target="_blank" style="display:block;position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--border);">
+              <img src="1차영상 썸네일.png" style="width:100%;aspect-ratio:9/16;object-fit:cover;display:block;">
+              <div style="position:absolute;inset:0;background:rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+                <div style="width:36px;height:36px;background:rgba(255,255,255,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:#1a1917;">▶</div>
+              </div>
+            </a>
+            <div style="margin-top:0.6rem;padding:0.7rem;background:var(--off-white);border:1px solid var(--border);border-radius:6px;">
+              <div style="font-size:18px;font-weight:800;color:var(--text-mid);">4,136회</div>
+              <div style="font-size:10px;color:var(--text-light);margin-bottom:0.4rem;">기준점</div>
+              <div style="font-size:11px;color:var(--red);font-weight:600;">정보 나열형 구성<br>핵심 가치 후반 배치<br>훅 없음</div>
+            </div>
+          </div>
+
+          <!-- 화살표 -->
+          <div style="display:flex;align-items:center;justify-content:center;padding-top:80px;">
+            <span style="font-size:22px;color:var(--accent);font-weight:700;">→</span>
+          </div>
+
+          <!-- 2차 (AFTER 1) -->
+          <div>
+            <div style="font-size:11px;font-weight:700;color:#fff;background:var(--accent);border-radius:6px;padding:4px 8px;display:inline-block;margin-bottom:0.6rem;">2차 · K-BBQ</div>
+            <a href="https://www.instagram.com/reel/DSMkh8aExM1/" target="_blank" style="display:block;position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--accent-mid);">
+              <img src="2차영상 썸네일.png" style="width:100%;aspect-ratio:9/16;object-fit:cover;display:block;">
+              <div style="position:absolute;inset:0;background:rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+                <div style="width:36px;height:36px;background:rgba(255,255,255,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:#1a1917;">▶</div>
+              </div>
+            </a>
+            <div style="margin-top:0.6rem;padding:0.7rem;background:var(--accent-light);border:1px solid var(--accent-mid);border-radius:6px;">
+              <div style="font-size:18px;font-weight:800;color:var(--accent);">22,301회</div>
+              <div style="font-size:10px;color:var(--accent);font-weight:700;margin-bottom:0.4rem;">↑ 5.4배</div>
+              <div style="font-size:11px;color:var(--green);font-weight:600;">'외국인 친구' 키워드 훅 적용<br>초반 1~5초 훅<br>현장 반응 중심</div>
+            </div>
+          </div>
+
+          <!-- 3차 (AFTER 2) -->
+          <div>
+            <div style="font-size:11px;font-weight:700;color:#fff;background:var(--accent);border-radius:6px;padding:4px 8px;display:inline-block;margin-bottom:0.6rem;">3차 · Boat Party</div>
+            <a href="https://www.instagram.com/reel/DUK2xURE8Rc/" target="_blank" style="display:block;position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--accent-mid);">
+              <img src="3차영상 썸네일.png" style="width:100%;aspect-ratio:9/16;object-fit:cover;display:block;">
+              <div style="position:absolute;inset:0;background:rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+                <div style="width:36px;height:36px;background:rgba(255,255,255,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:#1a1917;">▶</div>
+              </div>
+            </a>
+            <div style="margin-top:0.6rem;padding:0.7rem;background:var(--accent-light);border:1px solid var(--accent-mid);border-radius:6px;">
+              <div style="font-size:18px;font-weight:800;color:var(--accent);">19,024회</div>
+              <div style="font-size:10px;color:var(--accent);font-weight:700;margin-bottom:0.4rem;">↑ 4.6배</div>
+              <div style="font-size:11px;color:var(--green);font-weight:600;">'가성비 혜택' 키워드 훅 적용<br>이벤트별 차별화<br>높은 저장·공유율</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 구조 개선 포인트 (영상 아래 배치 — 영상 그리드와 동일 비율) -->
+        <div style="margin-top:1.5rem;display:grid;grid-template-columns:1fr 40px 1fr 1fr;gap:0.8rem;align-items:start;">
+          <!-- Before (1차 너비와 동일) -->
+          <div style="padding:1rem;background:var(--light);border:1px solid var(--border);border-radius:8px;">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-light);margin-bottom:0.6rem;">Before — 1차 구성</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;">
+              <li style="font-size:13px;color:var(--text-mid);padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--border-mid);">—</span>정보 나열형 구성</li>
+              <li style="font-size:13px;color:var(--text-mid);padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--border-mid);">—</span>핵심 가치가 영상 후반에 배치</li>
+              <li style="font-size:13px;color:var(--text-mid);padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--border-mid);">—</span>단순 행사 안내 중심</li>
+            </ul>
+          </div>
+          <!-- 화살표 스페이서 -->
+          <div style="display:flex;align-items:center;justify-content:center;padding-top:1.5rem;">
+            <span style="font-size:18px;color:var(--accent);font-weight:700;">→</span>
+          </div>
+          <!-- After (2차+3차 너비와 동일 — 2열 span) -->
+          <div style="grid-column:3 / span 2;padding:1rem;background:var(--accent-light);border:1px solid var(--accent-mid);border-radius:8px;">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:0.6rem;">After — 2·3차 구조 개선</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;">
+              <li style="font-size:13px;color:var(--text-mid);padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent);">→</span>초반 1~5초 핵심 가치 선배치 (훅)</li>
+              <li style="font-size:13px;color:var(--text-mid);padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent);">→</span>이벤트별 키워드 차별화 (외국인 친구·가성비)</li>
+              <li style="font-size:13px;color:var(--text-mid);padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent);">→</span>후기·현장 반응 중심 콘텐츠</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 최종 성과 요약 (구 green box → 맨 아래) -->
+        <div style="margin-top:1.5rem;padding:1.2rem 1.5rem;background:var(--text);border-radius:10px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+          <div style="display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;">
+            <div style="text-align:center;">
+              <div style="font-size:22px;font-weight:800;color:var(--warm);line-height:1.1;">4,136</div>
+              <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-top:2px;">1차 조회수</div>
+            </div>
+            <div style="font-size:18px;color:rgba(255,255,255,0.4);font-weight:700;">→</div>
+            <div style="text-align:center;">
+              <div style="font-size:22px;font-weight:800;color:var(--warm);line-height:1.1;">22,301</div>
+              <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-top:2px;">2차 조회수</div>
+            </div>
+            <div style="font-size:18px;color:rgba(255,255,255,0.4);font-weight:700;">→</div>
+            <div style="text-align:center;">
+              <div style="font-size:22px;font-weight:800;color:var(--warm);line-height:1.1;">19,024</div>
+              <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-top:2px;">3차 조회수</div>
+            </div>
+          </div>
+          <div style="font-size:15px;font-weight:800;color:#fff;padding:8px 16px;background:var(--accent);border-radius:8px;">티켓 구매 고객 및 매출 2배 증가</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 03 -->
+<div class="project-section" id="project-3">
+  <div class="project-section-inner">
+    <div class="project-meta">
+      <span class="proj-num">03</span>
+      <div>
+        <div class="proj-tags">
+          <span class="tag featured">타깃 세분화</span>
+          <span class="tag">프로모션</span>
+          <span class="tag">이벤트 기획</span>
+        </div>
+        <h2 class="proj-title">성인영어회화교육원 (Culcom)<br>오프라인 이벤트 기획·운영</h2>
+        <p class="proj-subtitle">첫 이벤트 참여자 만족도 조사와 비참여 고객 피드백을 분석해 오징어게임 테마 몰입형 이벤트로 전면 재기획, 가격 인상에도 참여율과 매출을 동시에 2배 이상 성장시켰습니다.</p>
+        <div class="proj-metrics">
+          <div class="metric">
+            <div style="display:flex;align-items:baseline;gap:0.3rem;">
+              <span style="font-size:15px;font-weight:700;color:#222;">참여자</span>
+              <span class="metric-val up">2.25배</span>
+            </div>
+            <span class="metric-label">20→45명</span>
+          </div>
+          <div class="metric">
+            <div style="display:flex;align-items:baseline;gap:0.3rem;">
+              <span style="font-size:15px;font-weight:700;color:#222;">매출</span>
+              <span class="metric-val up">2.55배</span>
+            </div>
+            <span class="metric-label">30만→76.5만</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">1.3만</span>
+            <span class="metric-label">온라인 누적 조회수</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="case-content">
+
+      <!-- 문제 발견 과정 -->
+      <div class="case-section">
+        <div class="case-title">문제 발견 과정</div>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+
+          <!-- 문제 박스 -->
+          <div style="padding:1rem 1.25rem;background:var(--white);border:1.5px solid var(--border);border-radius:10px;">
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-mid);margin-bottom:0.5rem;">문제</div>
+            <div style="font-size:14px;color:#222;font-weight:600;line-height:1.6;">기존 이벤트 목표 40명 → <strong>20명 달성</strong></div>
+            <div style="font-size:13px;color:var(--text-mid);margin-top:0.25rem;">재기획 이벤트 목표: 참여자 40명 재도전</div>
+          </div>
+
+          <!-- 화살표 -->
+          <div style="text-align:center;color:var(--text-mid);font-size:18px;line-height:1;">↓</div>
+
+          <!-- 원인 분석 박스 -->
+          <div style="padding:1rem 1.25rem;background:var(--white);border:1.5px solid var(--border);border-radius:10px;">
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-mid);margin-bottom:0.75rem;">원인 분석</div>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;">
+              <div style="font-size:13px;color:#333;line-height:1.65;">
+                <span style="font-weight:700;color:#222;">① 타 지점 성공 이벤트를 그대로 적용</span><br>
+                <span style="color:var(--text-mid);">→ 우리 지점 고객 특성을 고려하지 않음</span>
+              </div>
+              <div style="font-size:13px;color:#333;line-height:1.65;">
+                <span style="font-weight:700;color:#222;">② 지점 연령 특성 간과</span><br>
+                <span style="color:var(--text-mid);">우리 지점 평균 연령 <strong>30대 중후반</strong> vs 타 지점 20대 중후반</span><br>
+                <span style="color:var(--text-mid);">→ 20대 중심 친목형 파티 포맷이 맞지 않았음</span>
+              </div>
+              <div style="font-size:13px;color:#333;line-height:1.65;">
+                <span style="font-weight:700;color:#222;">③ 만족도 조사 결과 (18명)</span><br>
+                <span style="color:var(--text-mid);">"몰입이 떨어진다" 의견 <strong>9건</strong> 확인</span><br>
+                <span style="color:var(--text-mid);">→ ①②의 결과가 데이터로 증명됨</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 화살표 -->
+          <div style="text-align:center;color:var(--text-mid);font-size:18px;line-height:1;">↓</div>
+
+          <!-- 전략 수립 박스 (오렌지) -->
+          <div style="padding:1rem 1.25rem;background:var(--accent);border-radius:10px;">
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.7);margin-bottom:0.6rem;">전략 수립</div>
+            <ul style="margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:0.4rem;">
+              <li style="font-size:13px;color:#fff;line-height:1.6;">전 연령층이 공감할 수 있는 <strong>테마형 이벤트</strong>로 재기획</li>
+              <li style="font-size:13px;color:#fff;line-height:1.6;">오징어게임 시즌2 공개 1달 전 — <strong>화제성 선점</strong></li>
+              <li style="font-size:13px;color:#fff;line-height:1.6;">연령대별 맞춤 프로모션 진행 → <strong>티켓 구매 증가</strong> 가설</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 연령대별 맞춤 프로모션 운영 -->
+      <div class="case-section" style="background:linear-gradient(135deg,#fff8f5,#fff);border:2px solid var(--accent);border-radius:14px;padding:1.5rem;">
+        <div class="case-title" style="font-size:18px;font-weight:800;color:#222;border-left:4px solid var(--accent);padding-left:0.75rem;margin-bottom:1.25rem;">연령대별 맞춤 프로모션 운영</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+
+          <!-- 20~30대 -->
+          <div>
+            <div style="padding:1rem;background:var(--white);border:1px solid var(--border);border-radius:8px;margin-bottom:0.75rem;">
+              <div style="font-size:13px;font-weight:800;letter-spacing:0.03em;color:var(--accent);margin-bottom:0.4rem;">20~30대 — 온라인 중심</div>
+              <div style="font-size:12px;color:var(--text-mid);line-height:1.7;">인스타그램 릴스·스토리 바이럴 · 오징어게임 챌린지 콘텐츠 · 해시태그 이벤트</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;">
+              <div style="overflow:hidden;border-radius:8px;aspect-ratio:9/16;">
+                <img src="컬컴 온라인 홍보1.png" style="width:100%;height:115%;object-fit:cover;object-position:center center;display:block;transform:scale(1.18);transform-origin:center center;">
+              </div>
+              <div style="overflow:hidden;border-radius:8px;aspect-ratio:9/16;">
+                <img src="컬컴 온라인 홍보2.png" style="width:100%;height:115%;object-fit:cover;object-position:center center;display:block;transform:scale(1.18);transform-origin:center center;">
+              </div>
+            </div>
+          </div>
+
+          <!-- 40~60대 -->
+          <div>
+            <div style="padding:1rem;background:var(--white);border:1px solid var(--border);border-radius:8px;margin-bottom:0.75rem;">
+              <div style="font-size:13px;font-weight:800;letter-spacing:0.03em;color:var(--warm);margin-bottom:0.4rem;">40~60대 — 오프라인 체험형 부스 운영</div>
+              <div style="font-size:12px;color:var(--text-mid);line-height:1.7;">원내 포스터 직접 안내 · 수업 전후 체험 데모 · 지인 추천 할인 혜택</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;">
+              <div style="overflow:hidden;border-radius:8px;aspect-ratio:9/16;">
+                <img src="오프라인 홍보 1.PNG" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;">
+              </div>
+              <div style="overflow:hidden;border-radius:8px;aspect-ratio:9/16;">
+                <img src="오프라인 홍보2.PNG" style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 홍보 효율화 -->
+      <div class="case-section">
+        <div class="case-title">홍보 효율화</div>
+        <div class="before-after">
+          <div class="ba-col before">
+            <h4>Before</h4>
+            <ul>
+              <li>오프라인 홍보 주 4회 운영</li>
+              <li>시간대 무관하게 배포</li>
+            </ul>
+          </div>
+          <div class="ba-arrow">→</div>
+          <div class="ba-col after">
+            <h4>After</h4>
+            <ul>
+              <li>1주차 4회로 시간대별 효과 테스트</li>
+              <li>반응 높은 평일 저녁·주말 오전만 2회 집중</li>
+              <li>홍보 횟수 50% 줄이면서 성과 확대</li>
+            </ul>
+            <div style="margin-top:1rem;padding:0.75rem 1rem;background:linear-gradient(135deg,#fff8f5,#fff3ec);border:1.5px solid var(--accent);border-radius:8px;display:flex;align-items:center;gap:0.5rem;">
+              <span style="font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">결과</span>
+              <span style="font-size:13px;font-weight:700;color:#222;line-height:1.5;">목표 대비 <strong style="color:var(--accent);font-size:15px;">112% 달성</strong><br><span style="font-size:12px;font-weight:500;color:var(--text-mid);">40개 목표 → 45개 판매</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 04 -->
+<div class="project-section" id="project-4">
+  <div class="project-section-inner">
+    <div class="project-meta">
+      <span class="proj-num">04</span>
+      <div>
+        <div class="proj-tags">
+          <span class="tag featured">타깃 세분화</span>
+          <span class="tag">콘텐츠 전환</span>
+          <span class="tag">전환율 최적화</span>
+        </div>
+        <h2 class="proj-title">호주 테이블 스타일링 브랜드 론칭</h2>
+        <p class="proj-subtitle">팝업 운영 기간 1개월, 초기 홍보 영상은 3주간 실제 문의로 이어지지 않았습니다. 타깃을 시드니 거주 2030 한국인 여성으로 좁히고 스토리형 릴스로 전환, <u style="text-decoration-color:var(--accent);text-underline-offset:3px;font-weight:700;">0건이던 고객반응을 1주일 안에 실제 고객반응을 이끌어 냈습니다.</u></p>
+        <div class="proj-metrics">
+          <div class="metric">
+            <div style="display:flex;align-items:baseline;gap:0.3rem;">
+              <span style="font-size:15px;font-weight:700;color:#222;">도달 수</span>
+              <span class="metric-val up">4.5배</span>
+            </div>
+            <span class="metric-label">1,400 → 6,300</span>
+          </div>
+          <div class="metric">
+            <div style="display:flex;align-items:baseline;gap:0.3rem;">
+              <span style="font-size:15px;font-weight:700;color:#222;">1주일</span>
+              <span class="metric-val up" style="font-size:18px;">내</span>
+            </div>
+            <span class="metric-label">고객 반응 확보</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">0원</span>
+            <span class="metric-label">광고비</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val" style="font-size:18px;">고객 반응</span>
+            <span class="metric-label" style="color:var(--text-mid);line-height:1.7;">실고객 1명<br>고객 문의 5건<br>협업 제안 2건</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="case-content">
+
+      <!-- 콘텐츠 전환 과정 -->
+      <div class="case-section">
+        <div class="case-title">콘텐츠 전환 과정</div>
+        <div class="case-flow" style="align-items:stretch;">
+          <!-- 문제 -->
+          <div style="display:flex;flex-direction:column;gap:0.35rem;flex:1;">
+            <div style="font-size:10px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:0.1em;text-align:center;">문제</div>
+            <div class="flow-box" style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+              3주간 고객 반응 없음<br>
+              <span style="font-size:11px;color:var(--text-mid);">유료 광고 집행에도 문의 0</span>
+            </div>
+          </div>
+          <span class="flow-arrow" style="align-self:center;margin-top:1.4rem;">→</span>
+          <!-- 분석 -->
+          <div style="display:flex;flex-direction:column;gap:0.35rem;flex:1;">
+            <div style="font-size:10px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:0.1em;text-align:center;">분석</div>
+            <div class="flow-box" style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0.4rem;">
+              <div style="font-size:13px;font-weight:700;">경쟁사 콘텐츠 15개 분석</div>
+              <div style="font-size:12px;color:var(--text-mid);line-height:1.6;">
+                1. 공감형 콘텐츠가 비주얼형보다 반응 높음<br>
+                2. 창업자의 상황·고민이 담긴 콘텐츠가 문의를 유도
+              </div>
+            </div>
+          </div>
+          <span class="flow-arrow" style="align-self:center;margin-top:1.4rem;">→</span>
+          <!-- 실행 -->
+          <div style="display:flex;flex-direction:column;gap:0.35rem;flex:1;">
+            <div style="font-size:10px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:0.1em;text-align:center;">실행</div>
+            <div class="flow-box" style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0.4rem;background:var(--accent);border-color:var(--accent);color:#fff;">
+              <div style="font-size:12px;color:rgba(255,255,255,0.75);line-height:1.65;">
+                1. 타깃 좁히기<br>
+                <span style="font-size:11px;">시드니 거주 여성 → 시드니 거주 한국인 2030 여성</span>
+              </div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.75);line-height:1.65;">
+                2. 비주얼 중심 홍보영상 → 스토리형 홍보영상 전환
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="case-insight">
+          <strong>핵심 인사이트:</strong> 신생 브랜드는 예쁜 비주얼보다 창업자의 상황·고민이 담긴 콘텐츠가 공감과 문의를 유도. 단기 팝업 특성상 넓은 타깃보다 실제 구매 가능성이 높은 고객군에 집중하는 것이 전환에 유리함.
+        </div>
+      </div>
+
+      <!-- 영상 비교 -->
+      <div class="case-section">
+        <div class="case-title">초기 영상 vs 스토리형 전환 영상 <span style="font-size:11px;font-weight:500;color:var(--text-light);letter-spacing:0;">— 클릭하면 영상을 볼 수 있습니다 ↗</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+          <div>
+            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;">
+              <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;background:#eee;color:#666;padding:2px 8px;border-radius:100px;">BEFORE</span>
+              <span style="font-size:12px;font-weight:700;color:#333;">초기 영상 — 비주얼 중심</span>
+            </div>
+            <a href="https://www.instagram.com/reel/DTmh4y8k_hv/" target="_blank" style="display:block;border-radius:12px;overflow:hidden;position:relative;text-decoration:none;box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+              <img src="초기영상 썸네일.png" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;">
+              <div style="position:absolute;inset:0;background:rgba(0,0,0,0.38);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                <div style="font-size:34px;font-weight:900;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.5);">1,484</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.8);margin-top:2px;">views</div>
+              </div>
+              <div style="position:absolute;bottom:10px;right:12px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.2);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;">▶</div>
+            </a>
+          </div>
+          <div>
+            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;">
+              <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;background:var(--accent);color:#fff;padding:2px 8px;border-radius:100px;">AFTER</span>
+              <span style="font-size:12px;font-weight:700;color:#333;">스토리형 — 창업자 서사</span>
+            </div>
+            <a href="https://www.instagram.com/reel/DU2UwKMk03w/" target="_blank" style="display:block;border-radius:12px;overflow:hidden;position:relative;text-decoration:none;box-shadow:0 2px 12px rgba(255,126,54,0.25);">
+              <img src="스토리형 영상썸네일.png" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;">
+              <div style="position:absolute;inset:0;background:rgba(0,0,0,0.38);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                <div style="font-size:34px;font-weight:900;color:#FF7E36;text-shadow:0 2px 8px rgba(0,0,0,0.5);">6,386</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.8);margin-top:2px;">views &nbsp;↑ 4.5배</div>
+              </div>
+              <div style="position:absolute;bottom:10px;right:12px;width:36px;height:36px;border-radius:50%;background:rgba(255,126,54,0.85);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;">▶</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 전환율 최적화 Before/After -->
+      <div class="case-section">
+        <div class="case-title">전환율 최적화 포인트</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:14px;overflow:hidden;border:1px solid var(--border);">
+          <!-- BEFORE -->
+          <div style="background:#fafafa;padding:1.4rem 1.4rem 1.4rem 1.6rem;border-right:1px solid var(--border);">
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#999;background:#eee;display:inline-block;padding:3px 10px;border-radius:100px;margin-bottom:1rem;">Before</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
+              <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:13px;color:#555;line-height:1.55;">
+                <span style="color:#ccc;flex-shrink:0;margin-top:1px;">✕</span>시드니 거주 여성 전체 타깃
+              </li>
+              <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:13px;color:#555;line-height:1.55;">
+                <span style="color:#ccc;flex-shrink:0;margin-top:1px;">✕</span>비주얼·서비스 소개 중심
+              </li>
+              <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:13px;color:#555;line-height:1.55;">
+                <span style="color:#ccc;flex-shrink:0;margin-top:1px;">✕</span>영어 콘텐츠
+              </li>
+              <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:13px;color:#555;line-height:1.55;">
+                <span style="color:#ccc;flex-shrink:0;margin-top:1px;">✕</span>가격 정보 없음
+              </li>
+              <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:13px;color:#555;line-height:1.55;">
+                <span style="color:#ccc;flex-shrink:0;margin-top:1px;">✕</span>유료 광고 집행 (5만원)
+              </li>
+            </ul>
+          </div>
+          <!-- AFTER -->
+          <div style="background:#fff;padding:1.4rem 1.6rem 1.4rem 1.4rem;">
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#fff;background:var(--accent);display:inline-block;padding:3px 10px;border-radius:100px;margin-bottom:1rem;">After</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
+              <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:13px;color:#333;line-height:1.55;">
+                <span style="color:var(--accent);flex-shrink:0;margin-top:1px;font-weight:700;">✓</span>시드니에 거주하는 한국인 2030 여성으로 좁힘
+              </li>
+              <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:13px;color:#333;line-height:1.55;">
+                <span style="color:var(--accent);flex-shrink:0;margin-top:1px;font-weight:700;">✓</span>'해외창업 절망편', '고객 0명' 등 창업자 스토리와 서사 중심 스토리형 홍보영상
+              </li>
+              <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:13px;color:#333;line-height:1.55;">
+                <span style="color:var(--accent);flex-shrink:0;margin-top:1px;font-weight:700;">✓</span>한국어 음성으로 심리적 장벽 완화
+              </li>
+              <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:13px;color:#333;line-height:1.55;">
+                <span style="color:var(--accent);flex-shrink:0;margin-top:1px;font-weight:700;">✓</span>가격표 명시 → 문의 품질 향상
+              </li>
+              <li style="display:flex;gap:0.6rem;align-items:flex-start;font-size:13px;color:#333;line-height:1.55;">
+                <span style="color:var(--accent);flex-shrink:0;margin-top:1px;font-weight:700;">✓</span>광고 없이 콘텐츠 공감만으로 도달 확보 (광고비 0원)
+              </li>
+            </ul>
+            <div style="margin-top:1.2rem;padding:0.9rem 1rem;background:var(--accent);border-radius:10px;">
+              <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.4rem;">결과</div>
+              <div style="font-size:13px;font-weight:700;color:#fff;line-height:1.7;">도달 수 4.5배 증가<br>실고객 1명 · 고객 문의 5건 · 협업 제안 2건</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- PROJECT 05 -->
+<div class="project-section" id="project-5">
+  <div class="project-section-inner">
+    <div class="project-meta">
+      <span class="proj-num">05</span>
+      <div>
+        <div class="proj-tags">
+          <span class="tag featured">행사 기획</span>
+          <span class="tag">SNS 운영</span>
+          <span class="tag">오프라인 프로모션</span>
+        </div>
+        <h2 class="proj-title">프렌즈마켓<br>패션 플리마켓 기획·운영</h2>
+        <p class="proj-subtitle">일반인 주도 플리마켓의 사업 가능성을 검증하기 위해 기획부터 운영까지 총괄, 방문객과 셀러 양쪽 니즈를 충족하는 구조를 설계해 목표 방문객 150%를 달성했습니다.</p>
+        <div class="proj-metrics">
+          <div class="metric"><span class="metric-val up">150%</span><span class="metric-label">목표 대비 방문객</span></div>
+          <div class="metric"><span class="metric-val">119만원</span><span class="metric-label">당일 매출</span></div>
+          <div class="metric"><span class="metric-val">26,629</span><span class="metric-label">단일 게시물 조회수</span></div>
+          <div class="metric"><span class="metric-val">15명</span><span class="metric-label">셀러 전원 참여 동의</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="case-content">
+      <div class="case-section">
+        <div class="case-title">셀러·방문객 양쪽 니즈 동시 설계</div>
+        <div class="before-after">
+          <div class="ba-col before">
+            <h4>방문객 니즈</h4>
+            <ul>
+              <li>합리적 가격의 희소성 있는 패션</li>
+              <li>구경하는 재미와 현장 경험</li>
+            </ul>
+          </div>
+          <div class="ba-arrow">+</div>
+          <div class="ba-col after">
+            <h4>셀러 니즈</h4>
+            <ul>
+              <li>복잡하지 않은 참여 방식</li>
+              <li>부담 없는 비용</li>
+              <li>옷장 정리와 판매를 동시에</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="case-section">
+        <div class="case-title">온·오프라인 프로모션 전략</div>
+        <div class="case-flow">
+          <div class="flow-box">인스타그램 37개 게시물<br>누적 조회수 29,000회</div>
+          <span class="flow-arrow">+</span>
+          <div class="flow-box">성수역 출구 전단지 배포<br>콘셉트·음료 혜택 담음</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-box highlight">방문객 150명 달성<br>(전단 유입 약 70명)</div>
+        </div>
+        <div class="case-insight">
+          <strong>공유 이벤트 설계:</strong> 팔로우·좋아요·리그램 조건의 이벤트를 설계해 단일 게시물 조회수 26,629회·비팔로워 도달 63.3% 달성 — 팔로워 48명 계정에서 7,621개 계정 도달
+        </div>
+      </div>
+      <div class="result-boxes">
+        <div class="result-box"><div class="val">150명</div><div class="lbl">방문객 (목표 100명)</div></div>
+        <div class="result-box"><div class="val">119만원</div><div class="lbl">당일 매출</div></div>
+        <div class="result-box"><div class="val">26,629</div><div class="lbl">단일 게시물 조회수</div></div>
+        <div class="result-box"><div class="val">63.3%</div><div class="lbl">비팔로워 도달</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT 06 -->
+<div class="project-section" id="project-6">
+  <div class="project-section-inner">
+    <div class="project-meta">
+      <span class="proj-num">06</span>
+      <div>
+        <div class="proj-tags">
+          <span class="tag featured">고객 리서치</span>
+          <span class="tag">세그먼트 기획</span>
+          <span class="tag">데이터 분석</span>
+          <span class="tag">인턴</span>
+        </div>
+        <h2 class="proj-title">팀스파르타(주)<br>교육운영팀 운영기획 인턴</h2>
+        <p class="proj-subtitle">앱창업 트랙 만족도 하락 원인을 VOC·인터뷰 80건 분석으로 규명, 수강생 목표 기반 코호트를 분리하고 통합 관리 시트를 구축해 만족도를 팀 내 우수사례로 인정받을 수준으로 회복했습니다.</p>
+        <div class="proj-metrics">
+          <div class="metric"><span class="metric-val up">7.2→8.8</span><span class="metric-label">트랙 만족도</span></div>
+          <div class="metric"><span class="metric-val">80건</span><span class="metric-label">VOC·평가 분석</span></div>
+          <div class="metric"><span class="metric-val">40%</span><span class="metric-label">세그먼트 불일치 발견</span></div>
+          <div class="metric"><span class="metric-val">팀 우수사례</span><span class="metric-label">슬랙 공유</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="case-content">
+      <div class="case-section">
+        <div class="case-title">만족도 변화 흐름</div>
+        <div class="timeline-chart">
+          <div class="chart-row header">
+            <div class="chart-cell">시점</div>
+            <div class="chart-cell">개강</div>
+            <div class="chart-cell">1개월</div>
+            <div class="chart-cell">코호트 분리</div>
+            <div class="chart-cell">시트 통합</div>
+            <div class="chart-cell active-col">최종</div>
+          </div>
+          <div class="chart-row">
+            <div class="chart-cell label">만족도</div>
+            <div class="chart-cell">8.5점</div>
+            <div class="chart-cell" style="color:var(--red);font-weight:700">7.2점↓</div>
+            <div class="chart-cell">개선 시작</div>
+            <div class="chart-cell">회복 중</div>
+            <div class="chart-cell result">8.8점</div>
+          </div>
+        </div>
+      </div>
+      <div class="case-section">
+        <div class="case-title">분석 → 코호트 분리</div>
+        <div class="case-flow">
+          <div class="flow-box">만족도 하락 감지<br>8.5→7.2</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-box">정성·정량 평가<br>80건 분석</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-box">40% 목표 불일치<br>커리큘럼 불만족</div>
+          <span class="flow-arrow">→</span>
+          <div class="flow-box highlight">코호트 2분리</div>
+        </div>
+        <div class="case-insight">
+          <strong>핵심 발견:</strong> 수강생 40%가 정부지원사업 준비가 아닌 빠른 개발·앱 수익화를 목표로 함. 기존 커리큘럼은 60%에 맞춰 설계되어 있어 불일치 발생.<br>
+          → 정부지원사업형(60%) / 앱수익화형(40%)으로 코호트 분리, 40% 그룹 대상 AI 기반 앱개발 강의로 커리큘럼 재설계
+        </div>
+      </div>
+      <div class="case-section">
+        <div class="case-title">공통 관리 시트 구축</div>
+        <div class="before-after">
+          <div class="ba-col before">
+            <h4>Before</h4>
+            <ul>
+              <li>개발강사·창업강사 각자 별도 시트 관리</li>
+              <li>회의 시 수강생 상태 반복 설명 필요</li>
+              <li>강사 간 정보 공유 지연</li>
+            </ul>
+          </div>
+          <div class="ba-arrow">→</div>
+          <div class="ba-col after">
+            <h4>After</h4>
+            <ul>
+              <li>개발팀과 협업해 통합 공통 시트 구축</li>
+              <li>수강생 실력·상태 한눈에 파악</li>
+              <li>회의 효율화, 지원 방향 결정 속도 향상</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="result-boxes">
+        <div class="result-box"><div class="val">7.2→8.8</div><div class="lbl">만족도 회복</div></div>
+        <div class="result-box"><div class="val">팀 최초</div><div class="lbl">목표 기반 코호트 분리</div></div>
+        <div class="result-box"><div class="val">80건</div><div class="lbl">데이터 분석</div></div>
+        <div class="result-box"><div class="val">우수사례</div><div class="lbl">슬랙 공유</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+<!-- /PROJECTS -->
+
+<!-- SKILLS -->
+<div id="skills" style="background:var(--bg);padding:0 var(--side) 2.5rem;">
+<div style="max-width:var(--container);margin:0 auto;background:var(--white);border-radius:var(--radius-lg);padding:3.5rem 3rem;border:1px solid var(--border);box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+<section class="section-wrap" id="skills-inner" style="padding:0;">
+  <div class="section-label">스킬</div>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <h3>마케팅</h3>
+      <div class="skill-list">
+        <span class="skill-chip">콘텐츠 기획</span>
+        <span class="skill-chip">SNS 마케팅</span>
+        <span class="skill-chip">A/B 테스트</span>
+        <span class="skill-chip">고객 세분화</span>
+        <span class="skill-chip">CRM</span>
+        <span class="skill-chip">이벤트 기획</span>
+        <span class="skill-chip">오프라인 프로모션</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>툴</h3>
+      <div class="skill-list">
+        <span class="skill-chip">CapCut</span>
+        <span class="skill-chip">Instagram Insights</span>
+        <span class="skill-chip">Google Sheets</span>
+        <span class="skill-chip">Google Forms</span>
+        <span class="skill-chip">Slack</span>
+        <span class="skill-chip">Notion</span>
+        <span class="skill-chip">ChatGPT / Claude</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h3>역량</h3>
+      <div class="skill-list">
+        <span class="skill-chip">VOC·NPS 분석</span>
+        <span class="skill-chip">훅 설계</span>
+        <span class="skill-chip">CTA 기획</span>
+        <span class="skill-chip">코호트 설계</span>
+        <span class="skill-chip">메시지 설계</span>
+        <span class="skill-chip">협업 제안</span>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+</div>
+
+<!-- EXPERIENCE -->
+<div id="experience" style="background:var(--bg);padding:0 var(--side) 2.5rem;">
+<div style="max-width:var(--container);margin:0 auto;background:var(--white);border-radius:var(--radius-lg);padding:3.5rem 3rem;border:1px solid var(--border);box-shadow:0 1px 4px rgba(0,0,0,0.06);">
+<section style="padding:0;">
+  <div class="section-label">경험</div>
+  <div class="exp-list">
+    <div class="exp-item">
+      <div>
+        <div class="exp-date">2025.02 — 2025.08</div>
+        <span class="exp-type">인턴</span>
+      </div>
+      <div>
+        <div class="exp-company">팀스파르타(주)</div>
+        <div class="exp-role">교육운영팀 운영기획 인턴 · 6개월</div>
+        <ul class="exp-bullets">
+          <li>VOC·평가 80건 분석으로 수강생 세그먼트 불일치 40% 발견, 코호트 분리 운영</li>
+          <li>개발팀 협업 통합 관리 시트 구축, 만족도 7.2→8.8 회복</li>
+          <li>목표 기반 코호트 분리 팀 내 최초 사례, 슬랙 우수사례 공유</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div>
+        <div class="exp-date">2025.12 — 2026.02</div>
+        <span class="exp-type">프리랜서</span>
+      </div>
+      <div>
+        <div class="exp-company">호주 현지 이벤트사 (Flow Sydney)</div>
+        <div class="exp-role">협업 콘텐츠 릴스 기획·편집 · 3개월</div>
+        <ul class="exp-bullets">
+          <li>참여자 입장에서 운영 문제 직접 발견, 개선안 제안으로 3회 협업 확보</li>
+          <li>릴스 10개 분석 기반 훅 구조 개편, 조회수 5.4배·공유수 38배</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div>
+        <div class="exp-date">2024.03 — 2025.06</div>
+        <span class="exp-type">아르바이트</span>
+      </div>
+      <div>
+        <div class="exp-company">성인영어회화교육원 (Culcom)</div>
+        <div class="exp-role">운영팀 상담조교 · 1년 3개월</div>
+        <ul class="exp-bullets">
+          <li>주 20명 신규 고객 인바운드·대면 상담 및 결제 직접 유도</li>
+          <li>A/B 테스트로 노쇼율 19.7%p 개선, 월매출 29.5% 증가</li>
+          <li>오징어게임 테마 이벤트 기획·운영, 참여자 2.25배·매출 2.55배</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div>
+        <div class="exp-date">2026.01 — 2026.02</div>
+        <span class="exp-type">창업</span>
+      </div>
+      <div>
+        <div class="exp-company">호주 테이블 스타일링 브랜드 론칭</div>
+        <div class="exp-role">시드니 테이블 스타일링 브랜드 · 1개월</div>
+        <ul class="exp-bullets">
+          <li>3주 무반응 → 타깃 재설정·콘텐츠 전환으로 1주 내 실고객 반응 확보</li>
+          <li>광고비 0원, 도달 4.5배·문의 5건 전부 실이용 의사</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item">
+      <div>
+        <div class="exp-date">2025.06 — 2025.07</div>
+        <span class="exp-type">개인 프로젝트</span>
+      </div>
+      <div>
+        <div class="exp-company">프렌즈마켓</div>
+        <div class="exp-role">패션 플리마켓 기획·운영 · 1개월</div>
+        <ul class="exp-bullets">
+          <li>일반인 셀러 15명·의류 124점, 목표 방문객 150% 달성, 매출 119만 원</li>
+          <li>공유 이벤트 설계로 단일 게시물 조회수 26,629회·비팔로워 도달 63.3%</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-label" style="color:rgba(255,255,255,0.3);justify-content:center;margin-bottom:1.5rem">연락처</div>
+  <h2 class="contact-title">함께 일하고 싶다면<br><em>언제든 연락 주세요.</em></h2>
+  <p class="contact-subtitle">콘텐츠 마케팅 · 마케팅 기획 직무 지원 중</p>
+  <div class="contact-links">
+    <a href="mailto:irene0528@naver.com" class="contact-link">✉ irene0528@naver.com</a>
+    <a href="tel:010-3806-9228" class="contact-link">📞 010-3806-9228</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>문채린 — 마케터 포트폴리오 2026</span>
+  <span>콘텐츠 마케팅 · 마케팅 기획</span>
+</footer>
+
+
+<!-- FLOATING NAV TEXT -->
+<style>
+#side-nav {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 0;
+  pointer-events: none;
+}
+.side-nav-item {
+  pointer-events: all;
+  display: flex;
+  justify-content: flex-end;
+}
+.side-nav-item a {
+  display: block;
+  padding: 5px 16px 5px 14px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #bbb;
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  border-right: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s, font-weight 0.2s;
+  text-align: right;
+  line-height: 1.5;
+}
+.side-nav-item a:hover {
+  color: #FF7E36;
+}
+.side-nav-item a.active {
+  color: #FF7E36;
+  font-weight: 800;
+  border-right: 2px solid #FF7E36;
+}
+</style>
+
+<nav id="side-nav">
+  <div class="side-nav-item" data-target="hero">
+    <a href="#hero">소개</a>
+  </div>
+  <div class="side-nav-item" data-target="about">
+    <a href="#about">일하는 방식 — Step 3</a>
+  </div>
+  <div class="side-nav-item" data-target="project-1">
+    <a href="#project-1">01 &nbsp;영어회화교육원 고객관리·상담전환 개선</a>
+  </div>
+  <div class="side-nav-item" data-target="project-2">
+    <a href="#project-2">02 &nbsp;호주 이벤트사 협업 릴스 기획</a>
+  </div>
+  <div class="side-nav-item" data-target="project-3">
+    <a href="#project-3">03 &nbsp;영어회화교육원 오프라인 이벤트 기획·운영</a>
+  </div>
+  <div class="side-nav-item" data-target="project-4">
+    <a href="#project-4">04 &nbsp;호주 테이블 스타일링 브랜드 론칭</a>
+  </div>
+  <div class="side-nav-item" data-target="project-5">
+    <a href="#project-5">05 &nbsp;플리마켓 기획·운영</a>
+  </div>
+  <div class="side-nav-item" data-target="project-6">
+    <a href="#project-6">06 &nbsp;팀스파르타 운영기획 인턴</a>
+  </div>
+</nav>
+
+<script>
+(function() {
+  var items = document.querySelectorAll('#side-nav .side-nav-item');
+  var sections = Array.from(items).map(function(item) {
+    return document.getElementById(item.dataset.target);
+  });
+
+  function updateActive() {
+    var winH = window.innerHeight;
+    var current = 0;
+    sections.forEach(function(sec, i) {
+      if (!sec) return;
+      var top = sec.getBoundingClientRect().top;
+      if (top <= winH * 0.5) current = i;
+    });
+    items.forEach(function(item, i) {
+      item.querySelector('a').classList.toggle('active', i === current);
+    });
+  }
+
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
+})();
+</script>
+
+<style>
+@keyframes cardFadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+#proj-card-grid .proj-nav-card {
+  opacity: 0;
+}
+#proj-card-grid.animated .proj-nav-card {
+  animation: cardFadeUp 0.4s ease forwards;
+}
+#proj-card-grid.animated .proj-nav-card:nth-child(1) { animation-delay: 0.05s; }
+#proj-card-grid.animated .proj-nav-card:nth-child(2) { animation-delay: 0.12s; }
+#proj-card-grid.animated .proj-nav-card:nth-child(3) { animation-delay: 0.19s; }
+#proj-card-grid.animated .proj-nav-card:nth-child(4) { animation-delay: 0.26s; }
+#proj-card-grid.animated .proj-nav-card:nth-child(5) { animation-delay: 0.33s; }
+#proj-card-grid.animated .proj-nav-card:nth-child(6) { animation-delay: 0.40s; }
+</style>
+<script>
+(function() {
+  var grid = document.getElementById('proj-card-grid');
+  if (!grid) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        grid.classList.add('animated');
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.15 });
+  observer.observe(grid);
+})();
+</script>
+</body>
+</html>
