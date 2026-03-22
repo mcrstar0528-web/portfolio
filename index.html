@@ -1612,7 +1612,7 @@ footer span { font-size: 11px; color: var(--text-light); }
           <div class="metric"><span class="metric-val up">7.2→8.8</span><span class="metric-label">트랙 만족도</span></div>
           <div class="metric"><span class="metric-val">80건</span><span class="metric-label">VOC·평가 분석</span></div>
           <div class="metric"><span class="metric-val">40%</span><span class="metric-label">세그먼트 불일치 발견</span></div>
-          <div class="metric"><span class="metric-val">팀 우수사례</span><span class="metric-label">슬랙 공유</span></div>
+          <div class="metric"><span class="metric-val">팀 우수사례</span><span class="metric-label">팀 최초 목표 기반 코호트 분리</span></div>
         </div>
       </div>
     </div>
@@ -1638,24 +1638,37 @@ footer span { font-size: 11px; color: var(--text-light); }
           </div>
         </div>
       </div>
+      <!-- 문제 발견 → 원인 분석 플로우 -->
       <div class="case-section">
-        <div class="case-title">분석 → 코호트 분리</div>
+        <div class="case-title">문제 발견 → 원인 분석</div>
         <div class="case-flow">
-          <div class="flow-box">만족도 하락 감지<br>8.5→7.2</div>
+          <div class="flow-box">개강 1개월 만에<br>만족도 8.5→7.2 하락</div>
           <span class="flow-arrow">→</span>
-          <div class="flow-box">정성·정량 평가<br>80건 분석</div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-box">40% 목표 불일치<br>커리큘럼 불만족</div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-box highlight">코호트 2분리</div>
+          <div class="flow-box">VOC·평가 80건<br>정성·정량 분석</div>
         </div>
         <div class="case-insight">
-          <strong>핵심 발견:</strong> 수강생 40%가 정부지원사업 준비가 아닌 빠른 개발·앱 수익화를 목표로 함. 기존 커리큘럼은 60%에 맞춰 설계되어 있어 불일치 발생.<br>
-          → 정부지원사업형(60%) / 앱수익화형(40%)으로 코호트 분리, 40% 그룹 대상 AI 기반 앱개발 강의로 커리큘럼 재설계
+          <strong>핵심 발견:</strong> 수강생 40%가 공통적으로 커리큘럼 불만족. 이들의 목표는 정부지원사업 준비가 아닌 빠른 개발·앱 수익화. 기존 커리큘럼은 60% 기준으로 설계되어 목표 불일치 발생.
         </div>
       </div>
+
+      <!-- 해결 액션 카드 2개 -->
       <div class="case-section">
-        <div class="case-title">공통 관리 시트 구축</div>
+        <div class="case-title">해결 액션</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;">
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:0.5rem;">코호트 2분리</div>
+            <p style="font-size:13px;color:var(--text-mid);line-height:1.7;margin:0;">정부지원사업형(60%) 기존 과정 유지 / 앱수익화형(40%) 별도 그룹 분리. AI 기반 앱개발 강의로 커리큘럼 재설계</p>
+          </div>
+          <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.4rem;">
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:0.5rem;">공통 관리 시트 구축</div>
+            <p style="font-size:13px;color:var(--text-mid);line-height:1.7;margin:0;">개발강사·창업강사가 각각 관리하던 시트를 통합 기획. 그룹별 조회 기능과 입력 항목 구조 설계 후 개발팀에 전달해 구축</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Before/After -->
+      <div class="case-section">
+        <div class="case-title">공통 관리 시트 — Before / After</div>
         <div class="before-after">
           <div class="ba-col before">
             <h4>Before</h4>
@@ -1676,11 +1689,11 @@ footer span { font-size: 11px; color: var(--text-light); }
           </div>
         </div>
       </div>
-      <div class="result-boxes">
-        <div class="result-box"><div class="val">7.2→8.8</div><div class="lbl">만족도 회복</div></div>
-        <div class="result-box"><div class="val">팀 최초</div><div class="lbl">목표 기반 코호트 분리</div></div>
-        <div class="result-box"><div class="val">80건</div><div class="lbl">데이터 분석</div></div>
-        <div class="result-box"><div class="val">우수사례</div><div class="lbl">슬랙 공유</div></div>
+      <!-- 결과 강조 박스 -->
+      <div class="case-section">
+        <div class="case-insight">
+          <strong>결과 :</strong> 만족도 7.2→8.8 회복 / 회의 주 2회→1회 축소 / 팀 내 우수사례로 슬랙 공유
+        </div>
       </div>
     </div>
   </div>
