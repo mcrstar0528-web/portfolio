@@ -190,6 +190,12 @@ body {
 }
 .hero-btn-secondary:hover { border-color: var(--accent-mid); color: var(--accent); }
 
+/* ── VIDEO THUMB HOVER ── */
+.video-thumb { transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), box-shadow 0.25s ease; }
+.video-thumb:hover { transform: scale(1.03); box-shadow: 0 10px 36px rgba(0,0,0,0.22) !important; }
+.video-overlay { transition: background 0.25s ease; }
+.video-thumb:hover .video-overlay { background: rgba(0,0,0,0.52) !important; }
+
 /* ── SECTION CARD WRAPPER (Creatrip style rounded containers) ── */
 .section-card {
   background: var(--white);
@@ -699,9 +705,9 @@ footer span { font-size: 11px; color: var(--text-light); }
           <!-- 1차 (BEFORE) -->
           <div>
             <div style="font-size:11px;font-weight:700;color:var(--text-light);background:var(--light);border:1px solid var(--border);border-radius:6px;padding:4px 8px;display:inline-block;margin-bottom:0.6rem;">1차 · Meet up</div>
-            <a href="https://www.instagram.com/reel/DRwgCGKk9NV/" target="_blank" style="display:block;position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--border);">
+            <a href="https://www.instagram.com/reel/DRwgCGKk9NV/" target="_blank" class="video-thumb" style="display:block;position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--border);">
               <img src="images/1차영상 썸네일.png" style="width:100%;aspect-ratio:9/16;object-fit:cover;display:block;">
-              <div style="position:absolute;inset:0;background:rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+              <div class="video-overlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
                 <div style="width:36px;height:36px;background:rgba(255,255,255,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:#1a1917;">▶</div>
               </div>
             </a>
@@ -720,9 +726,9 @@ footer span { font-size: 11px; color: var(--text-light); }
           <!-- 2차 (AFTER 1) -->
           <div>
             <div style="font-size:11px;font-weight:700;color:#fff;background:var(--accent);border-radius:6px;padding:4px 8px;display:inline-block;margin-bottom:0.6rem;">2차 · K-BBQ</div>
-            <a href="https://www.instagram.com/reel/DSMkh8aExM1/" target="_blank" style="display:block;position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--accent-mid);">
+            <a href="https://www.instagram.com/reel/DSMkh8aExM1/" target="_blank" class="video-thumb" style="display:block;position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--accent-mid);">
               <img src="images/2차영상 썸네일.png" style="width:100%;aspect-ratio:9/16;object-fit:cover;display:block;">
-              <div style="position:absolute;inset:0;background:rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+              <div class="video-overlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
                 <div style="width:36px;height:36px;background:rgba(255,255,255,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:#1a1917;">▶</div>
               </div>
             </a>
@@ -736,9 +742,9 @@ footer span { font-size: 11px; color: var(--text-light); }
           <!-- 3차 (AFTER 2) -->
           <div>
             <div style="font-size:11px;font-weight:700;color:#fff;background:var(--accent);border-radius:6px;padding:4px 8px;display:inline-block;margin-bottom:0.6rem;">3차 · Boat Party</div>
-            <a href="https://www.instagram.com/reel/DUK2xURE8Rc/" target="_blank" style="display:block;position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--accent-mid);">
+            <a href="https://www.instagram.com/reel/DUK2xURE8Rc/" target="_blank" class="video-thumb" style="display:block;position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--accent-mid);">
               <img src="images/3차영상 썸네일.png" style="width:100%;aspect-ratio:9/16;object-fit:cover;display:block;">
-              <div style="position:absolute;inset:0;background:rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
+              <div class="video-overlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.25);display:flex;align-items:center;justify-content:center;">
                 <div style="width:36px;height:36px;background:rgba(255,255,255,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;color:#1a1917;">▶</div>
               </div>
             </a>
@@ -898,9 +904,9 @@ footer span { font-size: 11px; color: var(--text-light); }
               <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;background:#eee;color:#666;padding:2px 8px;border-radius:100px;">BEFORE</span>
               <span style="font-size:12px;font-weight:700;color:#333;">초기 영상 — 비주얼 중심</span>
             </div>
-            <a href="https://www.instagram.com/reel/DTmh4y8k_hv/" target="_blank" style="display:block;border-radius:12px;overflow:hidden;position:relative;text-decoration:none;box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+            <a href="https://www.instagram.com/reel/DTmh4y8k_hv/" target="_blank" class="video-thumb" style="display:block;border-radius:12px;overflow:hidden;position:relative;text-decoration:none;box-shadow:0 2px 12px rgba(0,0,0,0.1);">
               <img src="images/초기영상 썸네일.png" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;">
-              <div style="position:absolute;inset:0;background:rgba(0,0,0,0.38);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+              <div class="video-overlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.38);display:flex;flex-direction:column;align-items:center;justify-content:center;">
                 <div style="font-size:34px;font-weight:900;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.5);">1,484</div>
                 <div style="font-size:12px;color:rgba(255,255,255,0.8);margin-top:2px;">views</div>
               </div>
@@ -912,9 +918,9 @@ footer span { font-size: 11px; color: var(--text-light); }
               <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;background:var(--accent);color:#fff;padding:2px 8px;border-radius:100px;">AFTER</span>
               <span style="font-size:12px;font-weight:700;color:#333;">스토리형 — 창업자 서사</span>
             </div>
-            <a href="https://www.instagram.com/reel/DU2UwKMk03w/" target="_blank" style="display:block;border-radius:12px;overflow:hidden;position:relative;text-decoration:none;box-shadow:0 2px 12px rgba(255,126,54,0.25);">
+            <a href="https://www.instagram.com/reel/DU2UwKMk03w/" target="_blank" class="video-thumb" style="display:block;border-radius:12px;overflow:hidden;position:relative;text-decoration:none;box-shadow:0 2px 12px rgba(255,126,54,0.25);">
               <img src="images/스토리형 영상썸네일.png" style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover;">
-              <div style="position:absolute;inset:0;background:rgba(0,0,0,0.38);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+              <div class="video-overlay" style="position:absolute;inset:0;background:rgba(0,0,0,0.38);display:flex;flex-direction:column;align-items:center;justify-content:center;">
                 <div style="font-size:34px;font-weight:900;color:#FF7E36;text-shadow:0 2px 8px rgba(0,0,0,0.5);">6,386</div>
                 <div style="font-size:12px;color:rgba(255,255,255,0.8);margin-top:2px;">views &nbsp;↑ 4.5배</div>
               </div>
